@@ -3,5 +3,11 @@
 ```
 需要python版本3.x
 进入python目录执行python test.py
-需要安装pillow库
+
+plist 处理 modifyPlist
+
+依赖库 pip install
+pillow
+biplist
+xlrd
 ```
