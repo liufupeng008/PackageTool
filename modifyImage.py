@@ -49,9 +49,7 @@ class Test():
                   os.system('rm -rf ./%s/.DS_Store' % (login_dir))
                   os.system('rm -rf ./%s/.DS_Store' % (loading_dir))
 
-            #
-            # os.mkdir(folder)
-            # os.mkdir(dir_name)
+
             modify_images(loading_dir,0)
             modify_images(login_dir,1)
             for root, dirs, files in os.walk(logo_dir):
@@ -69,33 +67,35 @@ class Test():
       pass
 
       @staticmethod
-      def modify_images(dir_name,yfy_dir):
+      def modify_images(dir_name,yfy_dir,isIcon=True):
+            arr = [20,29,40,60,58,76,80,87,120,180,152,167,1024]
             for root, dirs, files in os.walk(yfy_dir):
                   for img_name in files:
                               path = os.path.join(root, img_name)
                               img = Image.open(path)
                               # print (img.format) # PNG
                               width, height = img.size
-                              if width == 38.5:
-                                  width = 38
-                                  height = 38
-                              if width == 120 or  width == 40 or width == 58 or width == 80:
-                                  shutil.copyfile('%s/%s' % (yfy_dir, img_name),
-                                                  '%s/%dx%d-1.png' % (dir_name, width, height))
-                                  if width == 40:
+                              if isIcon:
+                                if width in arr:
+                                  if width == 120 or  width == 40 or width == 58 or width == 80:
                                       shutil.copyfile('%s/%s' % (yfy_dir, img_name),
-                                                      '%s/%dx%d-2.png' % (dir_name, width, height))
+                                                      '%s/%dx%d-1.png' % (dir_name, width, height))
+                                      if width == 40:
+                                          shutil.copyfile('%s/%s' % (yfy_dir, img_name),
+                                                          '%s/%dx%d-2.png' % (dir_name, width, height))
 
-
-
-                              shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))
+                                  shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))
+                              else:
+                                      shutil.copyfile('%s/%s' % (yfy_dir, img_name),
+                                                      '%s/%dx%d.png' % (dir_name, width, height))
 
       @staticmethod
       def start_icon_image(yfy_path):
 
           asset = 'Assets.xcassets/'
+          asset = 'DTQCQHZB/Images.xcassets/'
           appicon_dirname = 'AppIcon_%s.appiconset'%(targetName)
-          path = projectPath + asset + appicon_dirname
+          path = xcodeprojPath + asset + appicon_dirname
           isExists = os.path.exists(path)
           # 判断结果
           if not isExists:
@@ -113,11 +113,12 @@ class Test():
 
 
       @staticmethod
-      def start_launchimage(yfy_path):
+      def start_launchimage(yfy_path,isIcon = False):
           asset = 'Assets.xcassets/'
+          asset = 'DTQCQHZB/Images.xcassets/'
 
           appicon_dirname = 'LaunchImage_%s.launchimage'%(targetName)
-          path = projectPath + asset + appicon_dirname
+          path = xcodeprojPath + asset + appicon_dirname
           isExists = os.path.exists(path)
           # 判断结果
           if not isExists:
@@ -130,19 +131,16 @@ class Test():
                 for json_name in files:
                     shutil.copyfile('%s/%s' % (root, json_name), '%s/%s' % (path, json_name))
 
-          Test.modify_images(path,yfy_path)
+          Test.modify_images(path,yfy_path,isIcon)
           pass
 
 
 if __name__ == '__main__':
 
-    yfy_launchimage_path = '/Users/yu/Documents/FangCloudSync/协作_出包排期/2.仙峰/4.H5/20180104-4002(屠神H5)/闪屏/'
-    yfy_icon_path = '/Users/yu/Documents/FangCloudSync/协作_出包排期/2.仙峰/4.H5/20180104-4002(屠神H5)/闪屏/'
-
+    basePath = '/Users/yu/Documents/FangCloudSync/协作_出包排期/2.仙峰/3.正版传奇/20180718-新包-4052(开天霸业)/'
+    yfy_launchimage_path = basePath + '闪屏-20180505_02(已用)'
+    yfy_icon_path =basePath +'20171213-icon-1024'
     isExists = os.path.exists(yfy_launchimage_path)
-    # Test.start_main_image()
-    icon_path = ''
-    # Test.start_icon_image(icon_path)
-
+    Test.start_main_image()
     Test.start_launchimage(yfy_launchimage_path)
     Test.start_icon_image(yfy_icon_path)
