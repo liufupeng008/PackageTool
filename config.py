@@ -1,8 +1,8 @@
 
-debug = True
+debug = False
 
 
-package_method = 1  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
+package_method = 2  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
 #docker
 BasePath= '/var/project'
 #debug
@@ -10,13 +10,13 @@ if debug:
     BasePath = '/Users/yu/Desktop/gameProject'
 ExportOptionsPath = BasePath + '/ipa'
 
-projectName = 'zbcq'
+projectName = 'lycq'
 
-targetName = 'KTBY'
+targetName = 'lthtaw115'
 
-channelNo="4052"
+channelNo="20935"
 
-ioshd = 'ios_hd70'
+ioshd = 'ios_hd10test'
 
 PluginConfig = 'Error'
 projectPath = 'Error'
@@ -36,7 +36,7 @@ xcodeprojPath = projectPath + 'frameworks/runtime-src/proj.ios_mac/'
 
 
 
-bundleid = "com.uwkgus.ktby"
+bundleid = "com.lhlt.xhtt.i4"
 
 xfplist = {'compileBitcode': False,
          'method': "ad-hoc", #app-store, ad-hoc, enterprise, development。

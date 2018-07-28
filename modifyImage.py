@@ -28,7 +28,7 @@ class Test():
 
 
             project_root_path = projectPath
-            # dir_name = project_root_path + 'ios_hd'+'10' '/assets/res/big'
+            dir_name_ioshd = project_root_path + 'ios_hd'+'115' '/assets/res/big'
             dir_name = project_root_path +'Resources/res/big'
             login_dir = 'login'
             loading_dir = 'loading'
@@ -41,7 +41,10 @@ class Test():
             backgroundiphonex_loading_name = 'backgroudiphonex_loading.jpg'
             folder = 'res'
             isExists = os.path.exists(folder)
+
             logo_lylc_name = 'logo_lylc.png'
+            if projectName == 'zbcq':
+                logo_lylc_name = 'logo_tdcj.png'
             print ('开始处理图片....')
             if  isExists:
                   # os.system('rm -rf ./%s'%(folder))
@@ -61,6 +64,7 @@ class Test():
                               out = img.resize((780, 401))
                               out.save(path, 'png')
                         shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name, logo_lylc_name))
+                        shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name_ioshd, logo_lylc_name))
 
             print('图片处理完成....')
 
@@ -83,6 +87,13 @@ class Test():
                                       if width == 40:
                                           shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                           '%s/%dx%d-2.png' % (dir_name, width, height))
+                                  # if width == 1024:
+                                  #     img = img.convert('RGBA')
+                                  #     img_blender = Image.new('RGBA', img.size, (0, 0, 0, 0))
+                                  #     img = Image.blend(img_blender, img, 1)
+                                  #     out = img.resize((1024, 1024))
+                                  #     out.save(path, 'png')
+
 
                                   shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))
                               else:
@@ -137,10 +148,10 @@ class Test():
 
 if __name__ == '__main__':
 
-    basePath = '/Users/yu/Documents/FangCloudSync/协作_出包排期/2.仙峰/3.正版传奇/20180718-新包-4052(开天霸业)/'
-    yfy_launchimage_path = basePath + '闪屏-20180505_02(已用)'
-    yfy_icon_path =basePath +'20171213-icon-1024'
+    basePath = '/Users/yu/Documents/FangCloudSync/协作_出包排期/天拓/正版传奇/20180720-5059/烈火雷霆_爱思渠道出包需求/烈火雷霆_爱思渠道出包需求/素材/'
+    yfy_launchimage_path = basePath + '闪屏5'
+    yfy_icon_path =basePath +'icon'
     isExists = os.path.exists(yfy_launchimage_path)
     Test.start_main_image()
-    Test.start_launchimage(yfy_launchimage_path)
-    Test.start_icon_image(yfy_icon_path)
+    # Test.start_launchimage(yfy_launchimage_path)
+    # Test.start_icon_image(yfy_icon_path)

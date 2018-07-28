@@ -1,4 +1,4 @@
-import os,sys
+import os
 from config import *
 import shutil
 class compile_index():
@@ -19,24 +19,38 @@ class compile_index():
         print("============begin %s compile src ==================="%(ioshd))
 
         root_dir = projectPath
-        current_dir = root_dir + ioshd
-        sourceSrcDir = root_dir  + "/ios_hd24"
-        dstSrcDir =current_dir
+        current_dir = root_dir + ioshd + '/src_origin/'
+        sourceSrcDir = current_dir  + "../assets/src/"
+        dstSrcDir =root_dir +'Resources/src/'
 
-        isExists = os.path.exists(current_dir)
-        # 判断结果
-        if not isExists:
-            os.mkdir(current_dir)
-            print(current_dir + ' success')
-        else:
-            print(current_dir + ' isexist')
+        key ='0181A5\(bdE'
+        b = '76c[F25%03'
+        # s = 'cocos luacompile -s ' + current_dir + " -d" + sourceSrcDir + "/ -e -k %s -b %s --disable-compile" % (key, b)
+        # os.system(s)
+
+        # isExists = os.path.exists(dstSrcDir)
+        # if not isExists:
+        #     # os.mkdir(dstSrcDir)
+        #     print(current_dir + ' success')
+        # else:
+        #     print(current_dir + ' isexist')
 
         if os.path.exists(dstSrcDir):
-            shutil.rmtree(dstSrcDir)
+            alllist = os.listdir(sourceSrcDir)
+            for i in alllist:
+                print(i)
+                if i != '.DS_Store':
+                    print('laile0')
+                    if os.path.exists(dstSrcDir + i):
+                        if os.path.isdir(dstSrcDir + i):
+                            shutil.rmtree(dstSrcDir+i)
+                        # elif os.path.isdir(dstSrcDir + i):
+                        #     shutil.rmtree(dstSrcDir+i)
+                    if os.path.isfile(sourceSrcDir+i):
+                        shutil.copyfile(sourceSrcDir+i, dstSrcDir+i)
+                    elif os.path.isdir(sourceSrcDir+i):
+                        shutil.copytree(sourceSrcDir + i, dstSrcDir + i)
 
-        shutil.copytree(sourceSrcDir, dstSrcDir)
-
-        os.system("cocos luacompile -s " + sourceSrcDir + " -d" + dstSrcDir +'/assets/src'+"/ -e -k 0181A5bdE -b 76cF25%03 --disable-compile")
         print("============end compile src ===================")
 
 

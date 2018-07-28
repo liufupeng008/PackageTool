@@ -7,12 +7,11 @@ class modify_xml():
     @staticmethod
     def start_modify_xml(val):
         # 解析dimen.xml
-        # dir = '/var/project/lycq-client_version/CocosLuaGame/ios_hd2/ios/PluginConfig.xml'
-        dir = ''
-        try:
-            dir = PluginConfig + '/ios/PluginConfig.xml'
-        except NameError as e:
-                dir = '/Users/yu/Desktop/gameProject/zbcq-client_version/CocosLuaGame/frameworks/runtime-src/proj.ios_mac/ios/PluginConfig.xml'
+        dir = '/Users/yu/Desktop/gameProject/lycq-client_version/CocosLuaGame/ios_hd2/ios/PluginConfig.xml'
+        # try:
+        #     dir = PluginConfig
+        # except NameError as e:
+        #         dir = '/Users/yu/Desktop/gameProject/zbcq-client_version/CocosLuaGame/frameworks/runtime-src/proj.ios_mac/ios/PluginConfig.xml'
 
         tree = ET.parse(dir)
         root = tree.getroot()  # 获取根节点
@@ -24,8 +23,9 @@ class modify_xml():
              # rank.set('updated', 'yes')
         if flag:
             tree.write(file_or_filename=dir,xml_declaration=True, encoding='utf-8')
+            print('success channelNo:',val)
         else:
-            print('error 没有可改变tag')
+            print('error tag')
 
 
 
