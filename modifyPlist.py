@@ -9,7 +9,8 @@ class modifyPlist():
     sys.getdefaultencoding()  # 查看设置前系统默认编码
 
     # sys.setdefaultencoding('utf8')
-    def start_modify_plist(self,path):
+    @staticmethod
+    def start_modify_plist(path):
         try:
             plist = {}
             if package_method == 1:
@@ -20,25 +21,38 @@ class modifyPlist():
                 plist = devplist
 
             writePlist(plist, "%s/ExportOptions.plist"%(path))
-            print('plist 写入成功',plist)
+            print('plist write success',plist)
         except (InvalidPlistException, NotBinaryPlistException) as e:
             print("Something bad happened:", e)
 
-    def read_modify_plist(self,path):
+    @staticmethod
+    def read_modify_plist():
         try:
-            plist = readPlist("%s/ios/info.plist"%(path))
-            print(plist)
+            LSApplicationQueriesSchemes = ['alipays','alipayshare','weixin','wechat','alipayqr','alipay','GameMall']
+            if channelNo == '12030':
+                LSApplicationQueriesSchemes.remove('GameMall')
+            plistPath = xcodeprojPath+targetName+'-info.plist'
+            if projectName == 'lycq':
+                plistPath = xcodeprojPath + targetName + '.plist'
+            plist = readPlist(plistPath)
+            # print(plist)
+            plist['CFBundleDisplayName']= displayName
+            plist['CFBundleIdentifier'] = bundleid
+            plist['LSApplicationQueriesSchemes'] = LSApplicationQueriesSchemes
+            writePlist(plist, plistPath)
 
+            # print(plist)
         except InvalidPlistException as e:
             print  ("Not a Plist or Plist Invalid:", e)
 
-
+    @staticmethod
+    def start():
+        val = xcodeprojPath
+        if projectName == 'h5':
+            val = val + '../'
+        if val:
+           modifyPlist.start_modify_plist(val)
+           modifyPlist.read_modify_plist()
 
 if __name__ == '__main__':
-    import sys
-    # print(sys.argv[1])
-    val = sys.argv[1]
-    # val = xcodeprojPath
-    if val:
-       modifyPlist().start_modify_plist(val)
-       # modifyPlist().read_modify_plist(val)
+    modifyPlist.start()

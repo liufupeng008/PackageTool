@@ -2,12 +2,14 @@
 
 # 导入xml包
 import xml.etree.ElementTree as ET
-class modify_xml():
+from config import channelNo,PluginConfig
+class modifyXML():
 
     @staticmethod
     def start_modify_xml(val):
         # 解析dimen.xml
-        dir = '/Users/yu/Desktop/gameProject/lycq-client_version/CocosLuaGame/ios_hd2/ios/PluginConfig.xml'
+        dir = PluginConfig
+        print(dir)
         # try:
         #     dir = PluginConfig
         # except NameError as e:
@@ -32,7 +34,7 @@ class modify_xml():
 if __name__ == '__main__':
     import sys
     # print(sys.argv[1])
-    val = sys.argv[1]
-    # var = channelNo
+    # val = sys.argv[1]
+    val = channelNo
     if val:
-      modify_xml.start_modify_xml(val)
+        modifyXML.start_modify_xml(val)

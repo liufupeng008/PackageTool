@@ -1,12 +1,12 @@
-
-# coding=utf-8
+# -*- coding: UTF-8 -*-
 from config import *
 import xlrd
 
-# 文件的名字
-file_name = projectPath + "版本.xlsx"
+name= "版本.xlsx"
+# name = name.encode("gb2312")
+file_name = projectPath + name
 # 打开文件
-bk = xlrd.open_workbook(file_name)
+bk = xlrd.open_workbook(file_name,encoding_override='utf-8')
 # 代开sheet1
 sh = bk.sheet_by_name("版本")
 # 获取行数
