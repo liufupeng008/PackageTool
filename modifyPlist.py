@@ -35,15 +35,37 @@ class modifyPlist():
             if projectName == 'lycq':
                 plistPath = xcodeprojPath + targetName + '.plist'
             plist = readPlist(plistPath)
-            # print(plist)
             plist['CFBundleDisplayName']= displayName
             plist['CFBundleIdentifier'] = bundleid
             plist['LSApplicationQueriesSchemes'] = LSApplicationQueriesSchemes
+            try:
+                plist['TIANTUOAPPID']=TIANTUOAPPID
+            except Exception as e:
+              pass
+            CFBundleURLTypes = plist['CFBundleURLTypes']
+            d = CFBundleURLTypes[0]
+            CFBundleURLSchemes = d['CFBundleURLSchemes']
+            CFBundleURLSchemes[0]=urlsechems
+            print(plist)
             writePlist(plist, plistPath)
 
             # print(plist)
         except InvalidPlistException as e:
             print  ("Not a Plist or Plist Invalid:", e)
+
+    @staticmethod
+    def read_modify_YXMListplist():
+        try:
+            if ChannelSdk == 'tiantuo_yxm':
+                YXMPlist_path =  xcodeprojPath + '../Classes/plugins/sdk/tiantuo_yxm/YXMList.plist'
+                plist = readPlist(YXMPlist_path)
+                plist['gameID'] =  projectInfo['yxm_gameId']
+                print(plist)
+                writePlist(plist, YXMPlist_path)
+
+            # print(plist)
+        except InvalidPlistException as e:
+            print("Not a Plist or Plist Invalid:", e)
 
     @staticmethod
     def start():
@@ -52,6 +74,7 @@ class modifyPlist():
             val = val + '../'
         if val:
            modifyPlist.start_modify_plist(val)
+           modifyPlist.read_modify_YXMListplist()
            modifyPlist.read_modify_plist()
 
 if __name__ == '__main__':

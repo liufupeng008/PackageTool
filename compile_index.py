@@ -50,6 +50,47 @@ class compile_index():
         if os.path.exists(compile_index.sourceDir + 'res/'):
            shutil.copyfile(manifest, dst+fileName)
 
+    @staticmethod
+    def copy_srcToResources():
+        fileName = 'PlatformConfig.luac'
+        file = compile_index.sourceDir + 'src/platform/' + fileName
+        dst = projectPath + 'Resources/src/platform/'
+        if os.path.exists(compile_index.sourceDir + 'src/platform/'):
+            shutil.copyfile(file, dst + fileName)
+
+        fileName = 'Switch.luac'
+        file = compile_index.sourceDir + 'src/' + fileName
+        dst = projectPath + 'Resources/src/'
+        if os.path.exists(compile_index.sourceDir + 'src/'):
+            shutil.copyfile(file, dst + fileName)
+
+    @staticmethod
+    def copyioshdToResources():
+        #source
+        for dir in ['res','src']:
+            assets = compile_index.sourceDir + dir
+            resources = compile_index.dstSrcDir + dir
+            if (os.path.exists(resources)):
+                shutil.rmtree(resources, onerror=readonly_handler);
+            shutil.copytree(assets,resources)
+        #dst
+        # compile_index.sourceDir
+        # for root, dirs, files in os.walk(assets):
+        #     files = list(filter(lambda x: x != '.DS_Store', files))
+        #     dirs = list(filter(lambda x: x != '.DS_Store', dirs))
+        #     print(root)
+        #     print(files)
+        #     for file in files:
+        #
+        #
+        #     for dir in dirs:
+        #         for file_name in files:
+        #             dst = compile_index.dstSrcDir + dir + '/' + file_name
+        #             file = root+'/' + file_name
+        #             # shutil.copyfile(file, dst)
+        #             pass
+
+
 
 if __name__ == '__main__':
     compile_index.encode_src()

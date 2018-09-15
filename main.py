@@ -11,10 +11,11 @@ class Main():
           # src res sum luac
           # compile_index.encode_src()
           compile_index.copy_manifestToResources()
+          compile_index.copy_srcToResources()
           modifyPlist.start()
           modifyXML.start_modify_xml(channelNo)
-          # modifyImage_cls.start()
-
+          modifyImage_cls.start()
+          #  '/Users/yu/Library/Developer/Xcode/DerivedData'
           pass
 
 

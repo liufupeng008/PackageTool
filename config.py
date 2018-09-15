@@ -1,5 +1,8 @@
 # -*- coding: UTF-8 -*-
-debug = False
+from config_game.lycq_config import *
+from config_game.zbcq_config import *
+
+debug = True
 
 
 package_method = 2  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
@@ -10,17 +13,27 @@ if debug:
     BasePath = '/Users/yu/Desktop/gameProject'
 ExportOptionsPath = BasePath + '/ipa'
 
-projectName = 'lycq'
+projectName = 'zbcq'
 
 
 PluginConfig = 'Error'
 projectPath = 'Error'
+projectInfo_dict = {}
+ChannelSdk = ''
+channelNo=''
 if projectName == 'lycq':
+    print('kakak')
     projectPath = BasePath +'/lycq-client_version/CocosLuaGame/'
     PluginConfig = projectPath + '/ios_hd2/ios/PluginConfig.xml'
+    projectInfo_dict = lyprojectInfo_dict
+    ChannelSdk = lyChannelSdk
+    channelNo = lychannelNo
 elif projectName == 'zbcq':
     projectPath = BasePath + '/zbcq-client_version/CocosLuaGame/'
     PluginConfig = projectPath + 'frameworks/runtime-src/proj.ios_mac/' + '/ios/PluginConfig.xml'
+    projectInfo_dict = zbprojectInfo_dict
+    ChannelSdk = zbChannelSdk
+    channelNo = zbchannelNo
 
 elif projectName == 'h5':
     projectPath = BasePath + '/H5_iOS/XFGame_WKWebView/XFGame_WKWebView/'
@@ -32,50 +45,22 @@ if projectName == 'h5':
     xcodeprojPath = projectPath
 
 
-channelNo='20813'
-
-projectInfo_dict = {
-    #zbcq
-    '5060':{'displayName':'赤焰沙城',
-            'bundleid':'com.yxm.chiyanshacheng',
-            'targetName':'zbcq_tt_yxm_yy',
-            'ios_hd':'ios_hd119',
-             'yxm_gameId':'xingtuo_chiyanshacheng_1'
-            },
-
-    '5062': {'displayName': '霸刀战魂',
-             'bundleid': 'com.yxm.badaozhanhun',
-             'targetName': 'zbcq_tt_yxm_yy',
-             'ios_hd': 'ios_hd121',
-             'yxm_gameId':'xingtuo_badaozhanhun_1'},
-
-    '5064': {'displayName': '决战龙城',
-             'bundleid': 'com.yxm.longchengjuezhan',
-             'targetName': 'zbcq_tt_yxm_yy',
-             'ios_hd': 'ios_hd122',
-             'yxm_gameId':'xingtuo_longchengjuezhan_1'},
-
-    '12030': {'displayName': '雷霆战神',
-             'bundleid': 'com.ltzs.jjyx',
-             'targetName': 'zbcq_tt_yxm_yy',
-             'ios_hd': 'ios_hd117',
-             'yxm_gameId':'xingtuo_longchengjuezhan_1'},
-    #lycq
-    '20813': {'displayName': '烈焰武尊',
-             'bundleid': 'com.xf.lywz.tz',
-             'targetName': 'tzlywz27',
-             'ios_hd': 'ios_hd27',
-             'yxm_gameId':'xingtuo_longchengjuezhan_1'}
-
-
-
-}
-projectInfo = projectInfo_dict[channelNo]
-targetName = projectInfo['targetName']
-displayName = projectInfo['displayName']
-bundleid = projectInfo['bundleid']
-ioshd = projectInfo['ios_hd']
-# print(projectInfo)
+bundleid = ''
+try:
+    projectInfo = projectInfo_dict[ChannelSdk]['info'][channelNo]
+    # print(projectInfo)
+    targetName = projectInfo_dict[ChannelSdk]['targetName']
+    displayName = projectInfo['displayName']
+    bundleid = projectInfo['bundleid']
+    ioshd = projectInfo['ios_hd']
+    urlsechems = projectInfo['urlsechems']
+except Exception as e:
+    pass
+# ioshd = 'ios_hd131'
+try:
+    TIANTUOAPPID = projectInfo['TIANTUOAPPID']
+except Exception as e:
+     pass
 
 xfplist = {'compileBitcode': False,
          'method': "ad-hoc", #app-store, ad-hoc, enterprise, development。

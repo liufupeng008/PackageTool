@@ -12,8 +12,8 @@ class modifyImage_cls():
 
             def modify_images(dir,var,dstdir=''):
                   for root, dirs, files in os.walk(dir):
-                        for img_name in files:
-                            if img_name != '.DS_Store':
+                        _files = list(filter(lambda x:x!='.DS_Store',files))
+                        for img_name in _files:
                               path = os.path.join(root, img_name)
                               img = Image.open(path)
                               if dstdir == '':
