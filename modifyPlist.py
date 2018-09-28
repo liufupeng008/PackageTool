@@ -32,9 +32,13 @@ class modifyPlist():
             if channelNo == '12030':
                 LSApplicationQueriesSchemes.remove('GameMall')
             plistPath = xcodeprojPath+targetName+'-info.plist'
-            if projectName == 'lycq':
+
+
+            try:
+                plist = readPlist(plistPath)
+            except FileNotFoundError as e:
                 plistPath = xcodeprojPath + targetName + '.plist'
-            plist = readPlist(plistPath)
+                plist = readPlist(plistPath)
             plist['CFBundleDisplayName']= displayName
             plist['CFBundleIdentifier'] = bundleid
             plist['LSApplicationQueriesSchemes'] = LSApplicationQueriesSchemes

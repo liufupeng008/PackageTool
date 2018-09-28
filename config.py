@@ -44,7 +44,7 @@ xcodeprojPath = projectPath + 'frameworks/runtime-src/proj.ios_mac/'
 if projectName == 'h5':
     xcodeprojPath = projectPath
 
-
+ioshd = ''
 bundleid = ''
 try:
     projectInfo = projectInfo_dict[ChannelSdk]['info'][channelNo]
@@ -56,7 +56,7 @@ try:
     urlsechems = projectInfo['urlsechems']
 except Exception as e:
     pass
-# ioshd = 'ios_hd131'
+# ioshd = 'ios_hd133'
 try:
     TIANTUOAPPID = projectInfo['TIANTUOAPPID']
 except Exception as e:

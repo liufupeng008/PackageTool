@@ -36,7 +36,17 @@ zbprojectInfo_dict = {
                                  'yxm_gameId': 'xingtuo_wangzhezhinu_1',
                                  'urlsechems': 'com.yxm.wangzhezhinu',
                                  'TIANTUOAPPID': '100952'},
-                                }},
+                        '5070': {'displayName': '荣耀传奇',
+                                 'bundleid': 'com.yxm.rongyaochuanqi',
+                                 'ios_hd': 'ios_hd135',
+                                 'yxm_gameId': 'xingtuo_rongyaochuanqi_1',
+                                 'urlsechems': 'com.yxm.rongyaochuanqi',
+                                 'TIANTUOAPPID': '100961'}
+
+                                },
+
+                        },
+
       'tiantuo_leyou': {
                 'targetName':'tiantuo_leyou',
                 'info':{
@@ -69,6 +79,17 @@ zbprojectInfo_dict = {
                      'bundleid': 'com.naud1245a.shcs',
                      'ios_hd': 'ios_hd131',
                      'urlsechems': 'com.naud1245a.shcs',
+                     },
+
+        }
+    },
+    'xianfeng_wzzd': {
+        'targetName': 'xianfeng_wzzd',
+        'info': {
+            '4058': {'displayName': '王者之巅',
+                     'bundleid': 'com.wangzhezhidian',
+                     'ios_hd': 'ios_hd133',
+                     'urlsechems': 'com.wangzhezhidian',
                      }
         }
     }
@@ -87,5 +108,5 @@ zbprojectInfo_dict = {
 
 
 }
-zbChannelSdk = 'tiantuo_yxm'
-zbchannelNo='5067'
+zbChannelSdk = 'xianfeng_wzzd'
+zbchannelNo='4058'
