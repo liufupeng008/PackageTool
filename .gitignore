@@ -105,4 +105,4 @@ venv.bak/
 # mypy
 .mypy_cache/
 
-config_game/zbcq_config.py
+zbcq_config.py

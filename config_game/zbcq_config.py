@@ -5,7 +5,6 @@
 # channelNo='5062'
 
 zbprojectInfo_dict = {
-
     'tiantuo_yxm': {
                 'targetName':'zbcq_tt_yxm_yy',
                 'info':{'5060':{'displayName':'赤焰沙城',
@@ -21,7 +20,9 @@ zbprojectInfo_dict = {
                                  'ios_hd': 'ios_hd121',
                                  'yxm_gameId':'xingtuo_badaozhanhun_1',
                                  'urlsechems': 'com.yxm.badaozhanhun',
-                                 'TIANTUOAPPID': '100874'
+                                 'TIANTUOAPPID': '100874',
+                                 'CFBundleVersion':'1.3',
+                                 'CFBundleShortVersionString':'1.3'
                                  },
 
                         '5063': {'displayName': '决战龙城',
@@ -98,9 +99,9 @@ zbprojectInfo_dict = {
         'targetName': 'tiantuo_maoer',
         'info': {
             '12038': {'displayName': '屠神霸业',
-                     'bundleid': 'com.wangzhezhidian',
+                     'bundleid': 'fsdcsd.gefdfds.gr',
                      'ios_hd': 'ios_hd136',
-                     'urlsechems': 'com.wangzhezhidian',
+                     'urlsechems': '',
                      'TIANTUOAPPID': '100216'
                      }
         }
@@ -108,12 +109,6 @@ zbprojectInfo_dict = {
 
 }
 
-zbChannelSdk = 'tiantuo_maoer'
-zbchannelNo='12038'
-
-  
-
-
-
-
+zbChannelSdk = 'tiantuo_yxm'
+zbchannelNo='5062'
 
