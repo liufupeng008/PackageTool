@@ -34,7 +34,6 @@ elif projectName == 'zbcq':
     projectInfo_dict = zbprojectInfo_dict
     ChannelSdk = zbChannelSdk
     channelNo = zbchannelNo
-
 elif projectName == 'h5':
     projectPath = BasePath + '/H5_iOS/XFGame_WKWebView/XFGame_WKWebView/'
 
@@ -47,11 +46,12 @@ if projectName == 'h5':
 ioshd = ''
 bundleid = ''
 try:
-    projectInfo = projectInfo_dict[ChannelSdk]['info'][channelNo]
+    projectInfo = dict(projectInfo_dict[ChannelSdk]['info'][channelNo])
     # print(projectInfo)
     targetName = projectInfo_dict[ChannelSdk]['targetName']
     displayName = projectInfo['displayName']
     bundleid = projectInfo['bundleid']
+
     ioshd = projectInfo['ios_hd']
     urlsechems = projectInfo['urlsechems']
 except Exception as e:
@@ -61,7 +61,9 @@ try:
     TIANTUOAPPID = projectInfo['TIANTUOAPPID']
 except Exception as e:
      pass
-
+# targetName = 'H5TLDJ'
+# targetName = 'H5DZSC'
+# targetName = 'H5FGBY'
 xfplist = {'compileBitcode': False,
          'method': "ad-hoc", #app-store, ad-hoc, enterprise, development。
          'provisioningProfiles': {bundleid: "xfyx_neibu_adhoc_20170408"},

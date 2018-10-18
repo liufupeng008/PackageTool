@@ -77,13 +77,14 @@ class modifyImage_cls():
                         shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name, logo_lylc_name))
                         shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name_ioshd, logo_lylc_name))
 
-            print('image finish....')
+            print('image finish')
 
       pass
 
       @staticmethod
       def modify_images(dir_name,yfy_dir,isIcon=True):
             arr = [20,29,40,60,58,76,80,87,120,180,152,167,1024]
+            needless = []
             for root, dirs, files in os.walk(yfy_dir):
                   for img_name in files:
                         if img_name != '.DS_Store':
@@ -108,19 +109,29 @@ class modifyImage_cls():
 
 
                                   shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))
+                                else:
+                                    needless.append(width)
+
                               else:
                                       shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                       '%s/%dx%d.png' % (dir_name, width, height))
 
+            print('尺寸不对个数:',len(needless), needless,)
+
+            print('尺寸应该是:', len(arr), arr, )
+
       @staticmethod
       def start_icon_image(yfy_path):
+          appicon_dirname = 'AppIcon_defualt.appiconset'
 
           asset = 'Assets.xcassets/'
           if projectName == 'zbcq':
               asset = 'DTQCQHZB/Images.xcassets/'
           elif projectName == 'lycq':
                asset = '/ios/Images.xcassets/'
-          appicon_dirname = 'AppIcon_defualt.appiconset'
+          elif projectName == 'h5':
+                appicon_dirname = 'AppIcon_%s.appiconset' % (targetName)
+
           path = xcodeprojPath + asset + appicon_dirname
           isExists = os.path.exists(path)
           if not isExists:
@@ -140,13 +151,16 @@ class modifyImage_cls():
 
       @staticmethod
       def start_launchimage(yfy_path,isIcon = False):
-          asset = '\Assets.xcassets/'
+          asset = 'Assets.xcassets/'
+          appicon_dirname = 'LaunchImage_defualt.launchimage'
+
           if projectName == 'zbcq':
             asset = 'DTQCQHZB/Images.xcassets/'
           elif projectName == 'lycq':
               asset = '/ios/Images.xcassets/'
 
-          appicon_dirname = 'LaunchImage_defualt.launchimage'
+          elif projectName == 'h5':
+            appicon_dirname ='LaunchImage_%s.launchimage'%(targetName)
           path = xcodeprojPath + asset + appicon_dirname
           isExists = os.path.exists(path)
           if not isExists:
@@ -169,7 +183,9 @@ class modifyImage_cls():
       @staticmethod
       def start():
           basePath = projectPath + '/' + ioshd + '/images/'
-          # basePath = '/Users/yu/Documents/FangCloudSync/协作_出包排期/游戏猫/正版传奇/20180802-5060/烈火雷霆_游戏猫越狱出包需求/烈火雷霆_游戏猫越狱出包需求/打包素材/'
+          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包】-iOS《屠龙单机》/2、出包素材（必须）/'
+          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包-iOS《帝指沙城》/2、出包素材（必须）/'
+          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/2.仙峰/4.H5/20181011-新包-(复古霸业)/'
           yfy_launchimage_path = basePath + 'launchimage'
           yfy_icon_path = basePath + 'icon'
           isExists = os.path.exists(yfy_launchimage_path)
@@ -182,7 +198,8 @@ class modifyImage_cls():
               modifyImage_cls.start_icon_image(yfy_icon_path)
           else:
               print(yfy_icon_path, 'dir is not exist')
-          modifyImage_cls.start_main_image(basePath)
+          if projectName != 'h5':
+             modifyImage_cls.start_main_image(basePath)
           
 if __name__ == '__main__':
     modifyImage_cls.start()

@@ -42,6 +42,12 @@ class modifyPlist():
             plist['CFBundleDisplayName']= displayName
             plist['CFBundleIdentifier'] = bundleid
             plist['LSApplicationQueriesSchemes'] = LSApplicationQueriesSchemes
+
+            if 'CFBundleShortVersionString' in projectInfo.keys():
+                CFBundleShortVersionString = projectInfo['CFBundleShortVersionString']
+                CFBundleVersion = projectInfo['CFBundleVersion']
+                plist['CFBundleVersion'] = CFBundleVersion
+                plist['CFBundleShortVersionString'] = CFBundleShortVersionString
             try:
                 plist['TIANTUOAPPID']=TIANTUOAPPID
             except Exception as e:

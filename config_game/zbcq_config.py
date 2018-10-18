@@ -92,21 +92,20 @@ zbprojectInfo_dict = {
                      'urlsechems': 'com.wangzhezhidian',
                      }
         }
+    },
+    'tiantuo_maoer': {
+        'targetName': 'tiantuo_maoer',
+        'info': {
+            '12038': {'displayName': '屠神霸业',
+                     'bundleid': 'com.wangzhezhidian',
+                     'ios_hd': 'ios_hd136',
+                     'urlsechems': 'com.wangzhezhidian',
+                     'TIANTUOAPPID': '100216'
+                     }
+        }
     }
 
-
-
-    #zbcq
-
-    #lycq
-    # '20813': {'displayName': '烈焰武尊',
-    #          'bundleid': 'com.xf.lywz.tz',
-    #          'targetName': 'tzlywz27',
-    #          'ios_hd': 'ios_hd27',
-    #          'yxm_gameId':'xingtuo_longchengjuezhan_1'}
-
-
-
 }
-zbChannelSdk = 'xianfeng_wzzd'
-zbchannelNo='4058'
+
+zbChannelSdk = 'tiantuo_maoer'
+zbchannelNo='12038'

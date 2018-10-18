@@ -17,7 +17,8 @@ class compile_index():
         print("============begin %s %s compile src ==================="%(projectName,ioshd))
         key ='0181A5\(bdE'
         b = '76c[F25%03'
-        shutil.rmtree(compile_index.sourceDir + 'src')
+        if os.path.exists(compile_index.sourceDir + 'src'):
+            shutil.rmtree(compile_index.sourceDir + 'src')
         cocos_cmd = 'cocos luacompile -s ' + compile_index.current_dir + " -d" + compile_index.sourceDir+'src/' + "/ -e -k %s -b %s --disable-compile" % (key, b)
         os.system(cocos_cmd)
         print("============ end compile src ===================")
@@ -65,30 +66,17 @@ class compile_index():
             shutil.copyfile(file, dst + fileName)
 
     @staticmethod
-    def copyioshdToResources():
-        #source
-        for dir in ['res','src']:
-            assets = compile_index.sourceDir + dir
-            resources = compile_index.dstSrcDir + dir
-            if (os.path.exists(resources)):
-                shutil.rmtree(resources, onerror=readonly_handler);
-            shutil.copytree(assets,resources)
-        #dst
-        # compile_index.sourceDir
-        # for root, dirs, files in os.walk(assets):
-        #     files = list(filter(lambda x: x != '.DS_Store', files))
-        #     dirs = list(filter(lambda x: x != '.DS_Store', dirs))
-        #     print(root)
-        #     print(files)
-        #     for file in files:
-        #
-        #
-        #     for dir in dirs:
-        #         for file_name in files:
-        #             dst = compile_index.dstSrcDir + dir + '/' + file_name
-        #             file = root+'/' + file_name
-        #             # shutil.copyfile(file, dst)
-        #             pass
+    def copyfileToResources():
+        compile_index.copy_srcToResources()
+        compile_index.copy_manifestToResources()
+
+    @staticmethod
+    def copy_ioshd_to_Resources():
+        exec_sh_cmd = 'cd %s && ./sumExport.sh %s'%(projectPath,ioshd)
+        print(exec_sh_cmd)
+        os.system(exec_sh_cmd)
+
+
 
 
 
