@@ -1,21 +1,26 @@
 import os,sys
 from config import *
 import shutil
+from modifyPlist import modifyPlist
+
+
 import os
 class exportArchive():
 
-
     @staticmethod
     def start_archive():
-        archivePath = xcodeprojPath+'archive'
-        if os.path.exists(archivePath):
-            shutil.rmtree(archivePath)
+        modifyPlist.start_modify_plist(xcodeprojPath)
+        import time
+        # archivePath = xcodeprojPath+'archive'
+        # if os.path.exists(archivePath):
+        #     shutil.rmtree(archivePath)
+        localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print('start archive ',localtime)
+        os.system('cd %s && ./sNextBuild.sh %s'%(projectPath,targetName))
 
-        configuration = "Release"
-        os.chmod('cd %s'%(xcodeprojPath))
-        os.chmod('xcodebuild clean - configuration %s'%(configuration))
-        os.chmod('xcodebuild build - configuration %s' % (configuration))
-        print('start archive ')
+        endtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+        print('start archive ', localtime)
+        print('finished archive ', endtime)
         pass
 
 

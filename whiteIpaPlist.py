@@ -25,7 +25,7 @@ class whitePlist():
                     '4050': {'com.idang4896.sbkcq': 'sbkcq_dis_20180704'},
                     '4053': {'com.wanrengongsha.xf151dpa': 'wanrengongsha_dis_20180718'},
                     }
-            4042
+
 
             provisioningProfiles = dict[channel]
             appstoreplist = {'compileBitcode': False,

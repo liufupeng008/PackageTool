@@ -14,6 +14,27 @@ lyprojectInfo_dict = {
                                         }
                                 }},
 
+    'yxmlytz': {
+        'targetName': 'yxmlytz',
+        'info': {'20933': {'displayName': '烈焰天尊',
+                           'bundleid': 'com.yxm.lieyantianzun',
+                           'ios_hd': 'ios_hd18',
+                           'urlsechems': 'com.yxm.lieyantianzun',
+                           'CFBundleVersion': '1.4',
+                           'CFBundleShortVersionString': '1.4',
+                           }
+                 }},
+
+    'xpyyfgwh': {
+        'targetName': 'xipufgwh30',
+        'info': {'20924': {'displayName': '复古武魂',
+                           'bundleid': 'com.fuguwhun.fgwh',
+                           'ios_hd': 'ios_hd30',
+                           'urlsechems': 'com.fuguwhun.fgwh',
+                           'CFBundleVersion': '2.3',
+                           'CFBundleShortVersionString': '2.3',
+                           }
+                 }},
 
 
 
@@ -29,5 +50,5 @@ lyprojectInfo_dict = {
 
 
 }
-lyChannelSdk = 'yxm'
-lychannelNo='20925'
+lyChannelSdk = 'xpyyfgwh'
+lychannelNo='20924'

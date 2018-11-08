@@ -2,16 +2,16 @@
 from config_game.lycq_config import *
 from config_game.zbcq_config import *
 
-debug = True
-
-
 package_method = 2  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
 #docker
 BasePath= '/var/project'
 #debug
-if debug:
+import os
+if os.path.exists(BasePath) ==False:
     BasePath = '/Users/yu/Desktop/gameProject'
 ExportOptionsPath = BasePath + '/ipa'
+
+
 
 projectName = 'zbcq'
 
@@ -34,10 +34,11 @@ elif projectName == 'zbcq':
     projectInfo_dict = zbprojectInfo_dict
     ChannelSdk = zbChannelSdk
     channelNo = zbchannelNo
+
 elif projectName == 'h5':
     projectPath = BasePath + '/H5_iOS/XFGame_WKWebView/XFGame_WKWebView/'
 
-
+versionPath = BasePath +'/version/'+ projectName + '/version/'
 xcodeprojPath = projectPath + 'frameworks/runtime-src/proj.ios_mac/'
 
 if projectName == 'h5':
@@ -56,11 +57,13 @@ try:
     urlsechems = projectInfo['urlsechems']
 except Exception as e:
     pass
-# ioshd = 'ios_hd133'
 try:
     TIANTUOAPPID = projectInfo['TIANTUOAPPID']
 except Exception as e:
      pass
+provisioningProfile = ''
+if 'provisioningProfiles' in projectInfo.keys():
+    provisioningProfile = projectInfo['provisioningProfiles']
 # targetName = 'H5TLDJ'
 # targetName = 'H5DZSC'
 # targetName = 'H5FGBY'
@@ -74,7 +77,7 @@ devplist = {'compileBitcode': False,
          }
 appstoreplist = {'compileBitcode': False,
          'method': "app-store",#app-store, ad-hoc, enterprise, development。
-         'provisioningProfiles': {bundleid: "tushenh5_dis_20180730"},
+         'provisioningProfiles': {bundleid: provisioningProfile},
          }
 
 

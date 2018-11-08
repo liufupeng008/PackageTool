@@ -21,8 +21,8 @@ zbprojectInfo_dict = {
                                  'yxm_gameId':'xingtuo_badaozhanhun_1',
                                  'urlsechems': 'com.yxm.badaozhanhun',
                                  'TIANTUOAPPID': '100874',
-                                 'CFBundleVersion':'1.3',
-                                 'CFBundleShortVersionString':'1.3'
+                                 'CFBundleVersion':'1.4',
+                                 'CFBundleShortVersionString':'1.4'
                                  },
 
                         '5063': {'displayName': '决战龙城',
@@ -30,14 +30,20 @@ zbprojectInfo_dict = {
                                  'ios_hd': 'ios_hd122',
                                  'yxm_gameId':'xingtuo_longchengjuezhan_1',
                                  'urlsechems': 'com.yxm.longchengjuezhan',
-                                 'TIANTUOAPPID': '100875'},
+                                 'TIANTUOAPPID': '100875',
+                                 'CFBundleVersion': '1.4',
+                                 'CFBundleShortVersionString': '1.4'
+                                 },
 
                         '5067': {'displayName': '王者之怒',
                                  'bundleid': 'com.yxm.wangzhezhinu',
                                  'ios_hd': 'ios_hd134',
                                  'yxm_gameId': 'xingtuo_wangzhezhinu_1',
                                  'urlsechems': 'com.yxm.wangzhezhinu',
-                                 'TIANTUOAPPID': '100952'},
+                                 'TIANTUOAPPID': '100952',
+                                 'CFBundleVersion': '1.3',
+                                 'CFBundleShortVersionString': '1.3'
+                                 },
                         '5070': {'displayName': '荣耀传奇',
                                  'bundleid': 'com.yxm.rongyaochuanqi',
                                  'ios_hd': 'ios_hd135',
@@ -105,10 +111,66 @@ zbprojectInfo_dict = {
                      'TIANTUOAPPID': '100216'
                      }
         }
+    },
+    'tiantuo_chuangyou': {
+        'targetName': 'tiantuo_chuangyou',
+        'info': {
+            '5072': {'displayName': '雷霆战神',
+                     'bundleid': 'com.sumit.ltzs',
+                     'ios_hd': 'ios_hd140',
+                     'urlsechems': 'CandySDK',
+                     'TIANTUOAPPID': '100895',
+                     'CFBundleVersion': '1.0',
+                     'CFBundleShortVersionString': '1.0'
+                     }
+        }
+    },
+    'tiantuo_chukai_cstlhj': {
+        'targetName': 'tiantuo_chukai_cstlhj',
+        'info': {
+            '12042': {'displayName': '传世屠龙合击',
+                     'bundleid': 'com.lk.cstlhj',
+                     'ios_hd': 'ios_hd143',
+                     'urlsechems': '',
+                     'TIANTUOAPPID': '101037',
+                     'CFBundleVersion': '1.0',
+                     'CFBundleShortVersionString': '1.0',
+                     'provisioningProfiles':'cstlhj_dis_20181024'
+                     }
+        }
+    },
+    'tiantuo_chukai_hccs': {
+        'targetName': 'tiantuo_chukai_hccs',
+        'info': {
+            '12043': {'displayName': '皇城传说',
+                      'bundleid': 'com.liuhong.hccs',
+                      'ios_hd': 'ios_hd144',
+                      'urlsechems': '',
+                      'TIANTUOAPPID': '101036',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'provisioningProfiles':'hccs_dis_20181025'
+                      }
+        }
+    },
+
+    'tiantuo_hty': {
+        'targetName': 'tiantuo_hty',
+        'info': {
+            '12047': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.lhleiting',
+                      'ios_hd': 'ios_hd147',
+                      'urlsechems': '',
+                      'TIANTUOAPPID': '100216',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'provisioningProfiles':'hccs_dis_20181025'
+                      }
+        }
     }
 
 }
 
-zbChannelSdk = 'tiantuo_yxm'
-zbchannelNo='5062'
+zbChannelSdk = 'tiantuo_hty'
+zbchannelNo = '12047'
 

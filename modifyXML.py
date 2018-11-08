@@ -2,13 +2,15 @@
 
 # 导入xml包
 import xml.etree.ElementTree as ET
-from config import channelNo,PluginConfig
+from config import channelNo,PluginConfig,projectPath,ioshd
+import os
+import shutil
 class modifyXML():
 
     @staticmethod
-    def start_modify_xml(val):
+    def start_modify_xml(val,dir=PluginConfig):
         # 解析dimen.xml
-        dir = PluginConfig
+        # dir = PluginConfig
         print(dir)
         # try:
         #     dir = PluginConfig
@@ -25,7 +27,11 @@ class modifyXML():
              # rank.set('updated', 'yes')
         if flag:
             tree.write(file_or_filename=dir,xml_declaration=True, encoding='utf-8')
-            print('success channelNo:',val)
+            print('succeeded channelNo:',val)
+            current_dir = projectPath + ioshd + '/ios/PluginConfig.xml'
+            if os.path.exists(dir):
+                shutil.copyfile(dir, current_dir)
+
         else:
             print('error tag')
 

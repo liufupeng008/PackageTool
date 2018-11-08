@@ -59,11 +59,14 @@ class compile_index():
         if os.path.exists(compile_index.sourceDir + 'src/platform/'):
             shutil.copyfile(file, dst + fileName)
 
-        fileName = 'Switch.luac'
-        file = compile_index.sourceDir + 'src/' + fileName
-        dst = projectPath + 'Resources/src/'
-        if os.path.exists(compile_index.sourceDir + 'src/'):
-            shutil.copyfile(file, dst + fileName)
+        fileName_list = list(['Switch.luac','GameConfig.luac'])
+        for fileName in fileName_list:
+            file = compile_index.sourceDir + 'src/' + fileName
+            dst = projectPath + 'Resources/src/'
+            if os.path.exists(compile_index.sourceDir + 'src/'):
+                shutil.copyfile(file, dst + fileName)
+
+
 
     @staticmethod
     def copyfileToResources():

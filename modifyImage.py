@@ -67,7 +67,8 @@ class modifyImage_cls():
             modify_images(login_dir, 1)
 
             for root, dirs, files in os.walk(logo_dir):
-                  for img_name in files:
+                  _files = list(filter(lambda x: x != '.DS_Store', files))
+                  for img_name in _files:
                         path = os.path.join(root, img_name)
                         img = Image.open(path)
                         width, height = img.size
@@ -77,7 +78,7 @@ class modifyImage_cls():
                         shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name, logo_lylc_name))
                         shutil.copyfile('%s/%s' % (logo_dir, img_name), '%s/%s' % (dir_name_ioshd, logo_lylc_name))
 
-            print('image finish')
+            print('图片处理 finished')
 
       pass
 
@@ -97,9 +98,12 @@ class modifyImage_cls():
                                   if width == 120 or  width == 40 or width == 58 or width == 80:
                                       shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                       '%s/%dx%d-1.png' % (dir_name, width, height))
+                                      os.rename('%s/%s' % (yfy_dir, img_name), '%s/%dx%d-1.png' % (yfy_dir, img_name))
                                       if width == 40:
                                           shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                           '%s/%dx%d-2.png' % (dir_name, width, height))
+                                          os.rename('%s/%s' % (yfy_dir, img_name),
+                                                    '%s/%dx%d-2.png' % (yfy_dir, img_name))
                                   # if width == 1024:
                                   #     img = img.convert('RGBA')
                                   #     img_blender = Image.new('RGBA', img.size, (0, 0, 0, 0))
@@ -194,7 +198,6 @@ class modifyImage_cls():
           else:
               print(yfy_launchimage_path, 'dir is not exist')
           if os.path.exists(yfy_icon_path):
-
               modifyImage_cls.start_icon_image(yfy_icon_path)
           else:
               print(yfy_icon_path, 'dir is not exist')
