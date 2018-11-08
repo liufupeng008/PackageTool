@@ -8,6 +8,7 @@ BasePath= '/var/project'
 #debug
 import os
 if os.path.exists(BasePath) ==False:
+    # BasePath = '/Users/lindada/Documents/MyWork'
     BasePath = '/Users/yu/Desktop/gameProject'
 ExportOptionsPath = BasePath + '/ipa'
 
