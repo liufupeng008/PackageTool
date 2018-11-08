@@ -7,7 +7,18 @@
 zbprojectInfo_dict = {
     'tiantuo_yxm': {
                 'targetName':'zbcq_tt_yxm_yy',
-                'info':{'5060':{'displayName':'赤焰沙城',
+                'info':{
+
+                        '5039':{'displayName':'烈火传奇',
+                                'bundleid':'com.liehuochuanqi',
+                                'ios_hd':'ios_hd71',
+                                 'yxm_gameId':'xingtuo_liehuochuanqi_1',
+                                'urlsechems':'com.liehuochuanqi',
+                                'TIANTUOAPPID':'100216',
+                                'CFBundleVersion':'3.4',
+                                'CFBundleShortVersionString':'3.4'
+                                        },
+                        '5060':{'displayName':'赤焰沙城',
                                 'bundleid':'com.yxm.chiyanshachengLS',
                                 'ios_hd':'ios_hd119',
                                  'yxm_gameId':'xingtuo_chiyanshachengLS_1',

@@ -98,12 +98,11 @@ class modifyImage_cls():
                                   if width == 120 or  width == 40 or width == 58 or width == 80:
                                       shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                       '%s/%dx%d-1.png' % (dir_name, width, height))
-                                      os.rename('%s/%s' % (yfy_dir, img_name), '%s/%dx%d-1.png' % (yfy_dir, img_name))
+                                      # os.rename('%s/%s' % (yfy_dir, img_name), '%s/%dx%d-1.png' % (yfy_dir, img_name))
                                       if width == 40:
                                           shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                           '%s/%dx%d-2.png' % (dir_name, width, height))
-                                          os.rename('%s/%s' % (yfy_dir, img_name),
-                                                    '%s/%dx%d-2.png' % (yfy_dir, img_name))
+                                          # os.rename('%s/%s' % (yfy_dir, img_name),'%s/%dx%d-2.png' % (yfy_dir, img_name))
                                   # if width == 1024:
                                   #     img = img.convert('RGBA')
                                   #     img_blender = Image.new('RGBA', img.size, (0, 0, 0, 0))
