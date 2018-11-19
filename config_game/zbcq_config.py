@@ -176,6 +176,7 @@ zbprojectInfo_dict = {
                       'CFBundleVersion': '1.0',
                       'CFBundleShortVersionString': '1.0',
                       'provisioningProfiles':'hccs_dis_20181025'
+
                       }
         }
     }

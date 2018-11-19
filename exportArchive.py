@@ -16,7 +16,7 @@ class exportArchive():
         #     shutil.rmtree(archivePath)
         localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print('start archive ',localtime)
-        os.system('cd %s && ./sNextBuild.sh %s'%(projectPath,targetName))
+        os.system('./sNextBuild.sh %s %s'%(targetName,projectPath))
 
         endtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print('start archive ', localtime)

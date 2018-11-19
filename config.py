@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 from config_game.lycq_config import *
 from config_game.zbcq_config import *
-
-package_method = 2  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
+from config_game.gzcq_config import *
+package_method = 1  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
 #docker
 BasePath= '/var/project'
 #debug
@@ -14,7 +14,7 @@ ExportOptionsPath = BasePath + '/ipa'
 
 
 
-projectName = 'zbcq'
+projectName = 'gzcq'
 
 
 PluginConfig = 'Error'
@@ -35,6 +35,13 @@ elif projectName == 'zbcq':
     projectInfo_dict = zbprojectInfo_dict
     ChannelSdk = zbChannelSdk
     channelNo = zbchannelNo
+
+elif projectName == 'gzcq':
+    projectPath = BasePath + '/client/gz-client_version/CocosLuaGame/'
+    PluginConfig = projectPath + '/frameworks/runtime-src/Classes/plugins/bridge/plugin/official/PluginConfig.xml'
+    projectInfo_dict = gzprojectInfo_dict
+    ChannelSdk = gzChannelSdk
+    channelNo = gzchannelNo
 
 elif projectName == 'h5':
     projectPath = BasePath + '/H5_iOS/XFGame_WKWebView/XFGame_WKWebView/'

@@ -134,7 +134,8 @@ class modifyImage_cls():
                asset = '/ios/Images.xcassets/'
           elif projectName == 'h5':
                 appicon_dirname = 'AppIcon_%s.appiconset' % (targetName)
-
+          elif projectName == 'gzcq':
+              asset = '/ios/Images.xcassets/'
           path = xcodeprojPath + asset + appicon_dirname
           isExists = os.path.exists(path)
           if not isExists:
@@ -161,7 +162,8 @@ class modifyImage_cls():
             asset = 'DTQCQHZB/Images.xcassets/'
           elif projectName == 'lycq':
               asset = '/ios/Images.xcassets/'
-
+          elif projectName == 'gzcq':
+              asset = 'ios/Images.xcassets/'
           elif projectName == 'h5':
             appicon_dirname ='LaunchImage_%s.launchimage'%(targetName)
           path = xcodeprojPath + asset + appicon_dirname

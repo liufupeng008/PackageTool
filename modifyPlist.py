@@ -28,11 +28,12 @@ class modifyPlist():
     @staticmethod
     def read_modify_plist():
         try:
-            LSApplicationQueriesSchemes = ['alipays','alipayshare','weixin','wechat','alipayqr','alipay','GameMall']
             if channelNo == '12030':
-                LSApplicationQueriesSchemes.remove('GameMall')
+                if len(LSApplicationQueriesSchemes)>0:
+                    LSApplicationQueriesSchemes.remove('GameMall')
             plistPath = xcodeprojPath+targetName+'-info.plist'
-
+            if projectName == 'gzcq':
+                plistPath = xcodeprojPath +'ios/plist/'+ targetName + '-info.plist'
 
             try:
                 plist = readPlist(plistPath)
@@ -41,7 +42,6 @@ class modifyPlist():
                 plist = readPlist(plistPath)
             plist['CFBundleDisplayName']= displayName
             plist['CFBundleIdentifier'] = bundleid
-            plist['LSApplicationQueriesSchemes'] = LSApplicationQueriesSchemes
 
             if 'CFBundleShortVersionString' in projectInfo.keys():
                 CFBundleShortVersionString = projectInfo['CFBundleShortVersionString']
@@ -55,7 +55,8 @@ class modifyPlist():
             CFBundleURLTypes = plist['CFBundleURLTypes']
             d = CFBundleURLTypes[0]
             CFBundleURLSchemes = d['CFBundleURLSchemes']
-            CFBundleURLSchemes[0]=urlsechems
+            if len(CFBundleURLSchemes):
+                CFBundleURLSchemes[0]=urlsechems
             print(plist)
             writePlist(plist, plistPath)
 

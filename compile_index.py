@@ -75,7 +75,7 @@ class compile_index():
 
     @staticmethod
     def copy_ioshd_to_Resources():
-        exec_sh_cmd = 'cd %s && ./sumExport.sh %s'%(projectPath,ioshd)
+        exec_sh_cmd = './sumExport.sh %s %s'%(ioshd,projectPath)
         print(exec_sh_cmd)
         os.system(exec_sh_cmd)
 
