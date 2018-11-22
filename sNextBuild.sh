@@ -13,7 +13,7 @@
 
 
 filePath="$2"
-echo "---${pwd}---"
+echo "---${filePath}---"
 ######project路径
 projectPath=$filePath/frameworks/runtime-src/proj.ios_mac
 #
@@ -24,15 +24,15 @@ projectPath=$filePath/frameworks/runtime-src/proj.ios_mac
 #targetName="tiantuo_leyou"
 #targetName="xianfeng_shcs"
 targetName="$1"
-
-
+echo "---${targetName}---"
+echo "---"$3"---"
 #####定义需要打包的target
 echo "开始clean"
 
 #更改ExportOptions 需要传入ExportOptionsPlist 文件的目录（也是项目所在目录）
 #cd $pythonPath && source activate MyPython && python modifyPlist.py
 
-cd ${projectPath} && rm -rf archive
+cd ${projectPath} && rm -rf archive && mkdir archive
 configuration="Release"
 
 xcodebuild clean -configuration ${configuration}
@@ -43,9 +43,9 @@ echo "start archive ${nowtime}"
 
 time=$(date "+%Y%m%d%H%M%S")
 
-ipaname="${targetName}_${time}"
 
-archivePath="archive/${ipaname}.xcarchive"
+
+archivePath="archive/${targetName}.xcarchive"
 
 xcodebuild archive -project "CocosLuaGame.xcodeproj" -scheme ${targetName} -configuration ${configuration} -archivePath ${archivePath}
 
@@ -61,10 +61,10 @@ echo "finish exportArchive"
 
 time=$(date "+%Y%m%d%H%M%S")
 
-ipaname="$2"
+ipaname="$3"
 cd ${exportPath} && mv "${targetName}.ipa" "${targetName}${ipaname}${time}.ipa"
 
-cd ${projectPath} && rm -rf archive
+#cd ${projectPath} && rm -rf archive
 
 open ${exportPath}
 

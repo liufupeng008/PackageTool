@@ -2,7 +2,7 @@ import os,sys
 from config import *
 import shutil
 from modifyPlist import modifyPlist
-
+import re
 
 import os
 class exportArchive():
@@ -16,7 +16,11 @@ class exportArchive():
         #     shutil.rmtree(archivePath)
         localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print('start archive ',localtime)
-        os.system('./sNextBuild.sh %s %s'%(targetName,projectPath))
+        a = re.split('\W+', bundleid, flags=0)
+        print(a)
+        p = re.sub("[A-Z]", "", a[len(a)-1])
+
+        os.system('./sNextBuild.sh %s %s %s'%(targetName,projectPath,p))
 
         endtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print('start archive ', localtime)
@@ -26,9 +30,38 @@ class exportArchive():
 
 
 
+    @staticmethod
+    def alter(old_str, new_str):
+        dir = ''
+        if projectName =='gzcq':
+            dir = 'ios_hd/'
+        current_dir = projectPath +dir+ ioshd + '/src_origin/'
+        file = current_dir + 'platform/' + 'PlatformConfig.lua'
+
+        with open(file, "r", encoding="utf-8") as f1, open("%s.bak" % file, "w", encoding="utf-8") as f2:
+            for line in f1:
+                if old_str in line:
+                    f2.write(re.sub(line, old_str + new_str+'\n', line))
+                    print(old_str + new_str+'\n')
+                elif '_G_IAP_ITEM_GONFIG_ =' in line:
+                    print(line)
+                    f2.write(line)
+                else:
+                    f2.write(line)
+
+            os.remove(file)
+
+        os.rename("%s.bak" % file, file)
+
+
+    # alter("_G_GAME_ID = ", "1442743856")
+
 
 if __name__ == '__main__':
-    exportArchive.start_archive()
+
+     os.system('docker exec 24c1b92197ea bash && cd /var/code/ && python3 compile_index.py && exit')
+
+    # exportArchive.start_archive()
 
 
 # nowtime=$(date "+%Y-%m-%d-%H:%M:%S")

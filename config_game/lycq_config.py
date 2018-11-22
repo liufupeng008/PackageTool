@@ -35,6 +35,18 @@ lyprojectInfo_dict = {
                            'CFBundleShortVersionString': '2.3',
                            }
                  }},
+    'xianfeng': {
+        'targetName': 'bf_ltss_52',
+        'info': {'4113': {'displayName': '龙腾盛世',
+                           'bundleid': 'com.lywz.ltss',
+                           'ios_hd': 'ios_hd52',
+                           'urlsechems': '',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '1002165',
+                           'provisioningProfiles': 'lywz3.dis'
+                           }
+                 }},
 
 
 
@@ -50,5 +62,5 @@ lyprojectInfo_dict = {
 
 
 }
-lyChannelSdk = 'xpyyfgwh'
-lychannelNo='20924'
+lyChannelSdk = 'xianfeng'
+lychannelNo='4113'

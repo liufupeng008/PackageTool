@@ -52,6 +52,8 @@ class modifyPlist():
                 plist['TIANTUOAPPID']=TIANTUOAPPID
             except Exception as e:
               pass
+            if 'packageid' in projectInfo.keys():
+                plist['packageid'] = projectInfo['packageid']
             CFBundleURLTypes = plist['CFBundleURLTypes']
             d = CFBundleURLTypes[0]
             CFBundleURLSchemes = d['CFBundleURLSchemes']

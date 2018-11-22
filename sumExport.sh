@@ -15,6 +15,18 @@ ios_hd="$1"
 #target
 echo "${ios_hd}"
 filePath="$2"
+strA="long string"
+strB="string"
+result=$(echo $filePath | grep "gz-client_version")
+if [[ "$result" != "" ]]
+then
+
+  ios_hd="ios_hd/${1}"
+  echo "包含 ${ios_hd}"
+else
+  echo "不是国战"
+fi
+
 echo "---$(pwd)---"
 #####project路径
 projectPath=$filePath/frameworks/runtime-src/proj.ios_mac

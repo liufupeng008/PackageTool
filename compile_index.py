@@ -3,11 +3,14 @@ from config import *
 import shutil
 class compile_index():
 
-    root_dir = projectPath
-    current_dir = root_dir + ioshd + '/src_origin/'
+    dir = ''
+
+    if projectName == 'gzcq':
+        dir = 'ios_hd/'
+    current_dir = projectPath + dir+ioshd + '/src_origin/'
     sourceDir = current_dir + "../assets/"
-    dstSrcDir = root_dir + 'Resources/'
-    exportDir = root_dir + 'export/'
+    dstSrcDir = projectPath + 'Resources/'
+    exportDir = projectPath + 'export/'
 
     @staticmethod
     def encode_src():
@@ -65,6 +68,9 @@ class compile_index():
             dst = projectPath + 'Resources/src/'
             if os.path.exists(compile_index.sourceDir + 'src/'):
                 shutil.copyfile(file, dst + fileName)
+
+
+
 
 
 

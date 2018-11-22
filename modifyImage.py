@@ -7,7 +7,10 @@ class modifyImage_cls():
       @staticmethod
       def start_main_image(path=''):
             project_root_path = projectPath
-            dir_name_ioshd = project_root_path + ioshd + '/assets/res/big'
+            dir = ''
+            if projectName == 'gzcq':
+                dir = 'ios_hd/'
+            dir_name_ioshd = project_root_path +dir+ ioshd + '/assets/res/big'
             dir_name = project_root_path +'Resources/res/big'
 
             def modify_images(dir,var,dstdir=''):
@@ -85,6 +88,9 @@ class modifyImage_cls():
       @staticmethod
       def modify_images(dir_name,yfy_dir,isIcon=True):
             arr = [20,29,40,60,58,76,80,87,120,180,152,167,1024]
+            launchimage_arr = ['640x960','640x1136','750x1334','768x1024','828x1792','1024x768',
+                               '1125x2436','1242x2208','1242x2688','1536x2048','1792x828',
+                               '2048x1536','2208x1242','2436x1125','2688x1242']
             needless = []
             for root, dirs, files in os.walk(yfy_dir):
                   for img_name in files:
@@ -114,10 +120,18 @@ class modifyImage_cls():
                                   shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))
                                 else:
                                     needless.append(width)
+                                    if os.path.exists('%s/%s' % (yfy_dir, img_name)):
+                                        os.remove('%s/%s' % (yfy_dir, img_name))
 
                               else:
-                                      shutil.copyfile('%s/%s' % (yfy_dir, img_name),
+                                      src_img_name = '%s/%s' % (yfy_dir, img_name)
+                                      launchimage_name = '%dx%d'% (width, height)
+                                      if launchimage_name in launchimage_arr:
+                                        shutil.copyfile(src_img_name,
                                                       '%s/%dx%d.png' % (dir_name, width, height))
+                                      else:
+                                          if os.path.exists(src_img_name):
+                                              os.remove(src_img_name)
 
             print('尺寸不对个数:',len(needless), needless,)
 
@@ -187,7 +201,10 @@ class modifyImage_cls():
 
       @staticmethod
       def start():
-          basePath = projectPath + '/' + ioshd + '/images/'
+          dir = ''
+          if projectName == 'gzcq':
+              dir = 'ios_hd/'
+          basePath = projectPath + dir + ioshd + '/images/'
           # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包】-iOS《屠龙单机》/2、出包素材（必须）/'
           # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包-iOS《帝指沙城》/2、出包素材（必须）/'
           # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/2.仙峰/4.H5/20181011-新包-(复古霸业)/'
