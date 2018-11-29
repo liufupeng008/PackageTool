@@ -19,10 +19,10 @@ zbprojectInfo_dict = {
                                 'CFBundleShortVersionString':'3.4'
                                         },
                         '5060':{'displayName':'赤焰沙城',
-                                'bundleid':'com.yxm.chiyanshachengLS',
+                                'bundleid':'com.chiyanshaheng.yxm',
                                 'ios_hd':'ios_hd119',
-                                 'yxm_gameId':'xingtuo_chiyanshachengLS_1',
-                                'urlsechems':'com.yxm.chiyanshachengLS',
+                                 'yxm_gameId':'xingtuo_chiyanshacheng_1',
+                                'urlsechems':'com.chiyanshaheng.yxm',
                                 'TIANTUOAPPID':'100867'
                                         },
 
@@ -72,8 +72,19 @@ zbprojectInfo_dict = {
                                 },
 
                         },
-
-      'tiantuo_leyou': {
+    'tiantuo_yxm_zb': {
+        'targetName': 'tt_yxm_zb',
+        'info': {
+            '5077': {'displayName': '烈焰皇城',
+                     'bundleid': 'com.lieyanhuangcheng.bg',
+                     'ios_hd': 'ios_hd150',
+                     'gameId': 'xingtuo_lieyanhuangcheng_3',
+                     'urlsechems': 'com.lieyanhuangcheng.bg',
+                     'TIANTUOAPPID': '100700',
+                     'CFBundleVersion': '1.11.0',
+                     'CFBundleShortVersionString': '1.11.0'
+                     }}},
+    'tiantuo_leyou': {
                 'targetName':'tiantuo_leyou',
                 'info':{
                         '5046': {'displayName': '烈焰传承',
@@ -194,7 +205,7 @@ zbprojectInfo_dict = {
             '12051': {'displayName': '烈火雷霆',
                       'bundleid': 'com.ltios.yanshan',
                       'ios_hd': 'ios_hd149',
-                      'urlsechems': '',
+                      'urlsechems': 'RaStar222101070',
                       'TIANTUOAPPID': '101070',
                       'CFBundleVersion': '1.0',
                       'CFBundleShortVersionString': '1.0',
@@ -204,6 +215,6 @@ zbprojectInfo_dict = {
 
 }
 
-zbChannelSdk = 'tiantuo_qiye'
-zbchannelNo = '12051'
+zbChannelSdk = 'tiantuo_yxm_zb'
+zbchannelNo = '5077'
 

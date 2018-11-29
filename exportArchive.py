@@ -59,9 +59,7 @@ class exportArchive():
 
 if __name__ == '__main__':
 
-     os.system('docker exec 24c1b92197ea bash && cd /var/code/ && python3 compile_index.py && exit')
-
-    # exportArchive.start_archive()
+    exportArchive.start_archive()
 
 
 # nowtime=$(date "+%Y-%m-%d-%H:%M:%S")

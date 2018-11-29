@@ -5,6 +5,7 @@ from modifyPlist import modifyPlist
 from modifyXML import modifyXML
 from modifyImage import modifyImage_cls
 from exportArchive import exportArchive
+import os
 import time
 class Main():
       @staticmethod
@@ -15,7 +16,7 @@ class Main():
           modifyPlist.start()
           modifyXML.start_modify_xml(channelNo)
           modifyImage_cls.start()
-          #  '/Users/yu/Library/Developer/Xcode/DerivedData'
+          os.system('rm -rf /Users/yu/Library/Developer/Xcode/DerivedData')
           # exportArchive.start_archive()
           pass
 

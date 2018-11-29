@@ -89,4 +89,5 @@ appstoreplist = {'compileBitcode': False,
          }
 
 
-
+#配置导出的工程目录
+exportProjectPath = ''

@@ -205,9 +205,6 @@ class modifyImage_cls():
           if projectName == 'gzcq':
               dir = 'ios_hd/'
           basePath = projectPath + dir + ioshd + '/images/'
-          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包】-iOS《屠龙单机》/2、出包素材（必须）/'
-          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/优洽/屠神H5/【优洽】-新包-iOS《帝指沙城》/2、出包素材（必须）/'
-          # basePath = '/Users/yu/Documents/FangCloudSyncSvn/协作_出包排期/2.仙峰/4.H5/20181011-新包-(复古霸业)/'
           yfy_launchimage_path = basePath + 'launchimage'
           yfy_icon_path = basePath + 'icon'
           isExists = os.path.exists(yfy_launchimage_path)
