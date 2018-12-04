@@ -182,6 +182,48 @@ zbprojectInfo_dict = {
                       }
         }
     },
+    'tiantuo_chukai_ltcj': {
+            'targetName': 'tiantuo_chukai_ltcj',
+            'info': {
+                '12044': {'displayName': '雷霆裁决',
+                          'bundleid': 'com.wangzhiz',
+                          'ios_hd': 'ios_hd145',
+                          'urlsechems': '',
+                          'TIANTUOAPPID': '100708',
+                          'CFBundleVersion': '1.1.2',
+                          'CFBundleShortVersionString': '1.1.2',
+                          'provisioningProfiles':'ltcj_dis_20180504'
+                          }
+            }
+        },
+    'tiantuo_chukai_ydsc': {
+                'targetName': 'tiantuo_chukai_ydsc',
+                'info': {
+                    '12045': {'displayName': '一刀沙城',
+                              'bundleid': 'com.lufang',
+                              'ios_hd': 'ios_hd146',
+                              'urlsechems': '',
+                              'TIANTUOAPPID': '100706',
+                              'CFBundleVersion': '1.1.2',
+                              'CFBundleShortVersionString': '1.1.2',
+                              'provisioningProfiles':'ydsc_dis_20180504'
+                              }
+                }
+            },
+    'tiantuo_chukai_scby': {
+                    'targetName': 'tiantuo_chukai_scby',
+                    'info': {
+                        '12048': {'displayName': '沙城霸业',
+                                  'bundleid': 'com.yanjiang',
+                                  'ios_hd': 'ios_hd148',
+                                  'urlsechems': '',
+                                  'TIANTUOAPPID': '100295',
+                                  'CFBundleVersion': '1.1.2',
+                                  'CFBundleShortVersionString': '1.1.2',
+                                  'provisioningProfiles':'scby_dis_20181107'
+                                  }
+                    }
+                },
 
     'tiantuo_hty': {
         'targetName': 'tiantuo_hty',
@@ -262,6 +304,8 @@ zbprojectInfo_dict = {
 
 }
 
+
 zbChannelSdk = 'tiantuo_qiye'
 zbchannelNo = '12057'
+
 
