@@ -1,4 +1,4 @@
-import os,sys
+# -*- coding: UTF-8 -*-
 from config import *
 import shutil
 from modifyPlist import modifyPlist

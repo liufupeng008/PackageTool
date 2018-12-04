@@ -7,7 +7,8 @@
       "filename" : "1242x2688.png",
       "minimum-system-version" : "12.0",
       "orientation" : "portrait",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "1242x2688"
     },
     {
       "extent" : "full-screen",
@@ -16,7 +17,8 @@
       "filename" : "2688x1242.png",
       "minimum-system-version" : "12.0",
       "orientation" : "landscape",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "2688x1242"
     },
     {
       "extent" : "full-screen",
@@ -25,7 +27,8 @@
       "filename" : "828x1792.png",
       "minimum-system-version" : "12.0",
       "orientation" : "portrait",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "828x1792"
     },
     {
       "extent" : "full-screen",
@@ -34,7 +37,8 @@
       "filename" : "1792x828.png",
       "minimum-system-version" : "12.0",
       "orientation" : "landscape",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "828x1792"
     },
     {
       "extent" : "full-screen",
@@ -43,7 +47,8 @@
       "filename" : "1125x2436.png",
       "minimum-system-version" : "11.0",
       "orientation" : "portrait",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "1125x2436"
     },
     {
       "extent" : "full-screen",
@@ -52,7 +57,8 @@
       "filename" : "2436x1125.png",
       "minimum-system-version" : "11.0",
       "orientation" : "landscape",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "2436x1125"
     },
     {
       "extent" : "full-screen",
@@ -61,7 +67,8 @@
       "filename" : "1242x2208.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "1242x2208"
     },
     {
       "extent" : "full-screen",
@@ -70,7 +77,8 @@
       "filename" : "2208x1242.png",
       "minimum-system-version" : "8.0",
       "orientation" : "landscape",
-      "scale" : "3x"
+      "scale" : "3x",
+      "shuaijie_size" : "2208x1242"
     },
     {
       "extent" : "full-screen",
@@ -79,7 +87,8 @@
       "filename" : "750x1334.png",
       "minimum-system-version" : "8.0",
       "orientation" : "portrait",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "750x1334"
     },
     {
       "orientation" : "portrait",
@@ -87,7 +96,8 @@
       "filename" : "640x960.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "640x960"
     },
     {
       "extent" : "full-screen",
@@ -96,7 +106,8 @@
       "filename" : "640x1136.png",
       "minimum-system-version" : "7.0",
       "orientation" : "portrait",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "640x1136"
     },
     {
       "orientation" : "portrait",
@@ -104,7 +115,8 @@
       "filename" : "768x1024.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "scale" : "1x"
+      "scale" : "1x",
+      "shuaijie_size" : "768x1024"
     },
     {
       "orientation" : "landscape",
@@ -112,7 +124,8 @@
       "filename" : "1024x768.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "scale" : "1x"
+      "scale" : "1x",
+      "shuaijie_size" : "1024x768"
     },
     {
       "orientation" : "portrait",
@@ -120,7 +133,8 @@
       "filename" : "1536x2048.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "1536x2048"
     },
     {
       "orientation" : "landscape",
@@ -128,7 +142,8 @@
       "filename" : "2048x1536.png",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "scale" : "2x"
+      "scale" : "2x",
+      "shuaijie_size" : "2048x1536"
     }
   ],
   "info" : {

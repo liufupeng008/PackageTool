@@ -54,6 +54,10 @@ class modifyPlist():
               pass
             if 'packageid' in projectInfo.keys():
                 plist['packageid'] = projectInfo['packageid']
+            #打分包
+            if 'TT_MD_ID' in projectInfo.keys():
+                plist['TT_MD_ID'] = projectInfo['TT_MD_ID']
+
             CFBundleURLTypes = plist['CFBundleURLTypes']
             d = CFBundleURLTypes[0]
             CFBundleURLSchemes = d['CFBundleURLSchemes']

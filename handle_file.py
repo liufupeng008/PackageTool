@@ -1,8 +1,78 @@
 # -*- coding: UTF-8 -*-
 import time
 import os
-from config import exportProjectPath
+from config import *
+import json
 class Handle_file():
+
+
+          @staticmethod
+          def random_name():
+              import random
+              import string
+              salt = ''.join(random.sample(string.ascii_letters + string.digits, 10))
+              salt = salt + '.png'
+              print(salt)
+              return salt
+
+          @staticmethod
+          def get_launchimage_path():
+              isExists = os.path.exists(xcassets_path)
+              if isExists == True:
+                  return xcassets_path + '/LaunchImage_defualt.launchimage/'
+              return ''
+          @staticmethod
+          def get_icon_path():
+              isExists = os.path.exists(xcassets_path)
+              if isExists == True:
+                  return xcassets_path+ 'AppIcon_defualt.appiconset'
+              return ''
+
+
+          @staticmethod
+          def handle_launchimage():
+
+
+              def handle_file(file_path,folder_path):
+                  with open(file_path, "r", encoding="utf-8") as f, open("%s.bak" % file_path, "w",
+                                                                         encoding="utf-8") as f2:
+                      _list = list(f)
+                      _list = list(filter(lambda x: x != '' and x != ' ', _list))
+                      str_list = list()
+                      for index, line in enumerate(_list, start=1):
+                          str_list.append(line)
+                          # print(line)
+
+                      test_str = "".join(str_list)
+                      dictinfo = json.loads(test_str)
+                      images = list(dictinfo['images'])
+                      for image_info in images:
+                          filename = Handle_file.random_name()
+                          sourceDirList = os.listdir(folder_path)
+                          files = list(filter(lambda x: x != '.DS_Store' and '.png' in x, sourceDirList))
+                          print('1')
+                          for fi in files:
+                              if fi == image_info['filename']:
+                                 image_info['filename'] = filename
+                                 os.rename("%s/%s" % (folder_path,fi), "%s/%s" % (folder_path,filename))
+                              # print(fi)
+                              pass
+                      #时间复杂度O(n^2)
+
+                      b = str(dictinfo)
+                      b = b.replace("'",'"')
+                      f2.write(b)
+                      print('ll')
+
+                    #     f2.writelines(str(Handle_file.launchimage_dict))
+                      os.rename("%s.bak" % file_path, '%s/Contents.json' % folder_path)
+
+              launchimagefilepath =Handle_file.get_launchimage_path() + '/Contents.json'
+              launchimage_path = Handle_file.get_launchimage_path()
+              iconimagefilepath =  Handle_file.get_icon_path() +  '/Contents.json'
+              iconimage_path = Handle_file.get_icon_path()
+              handle_file(launchimagefilepath,launchimage_path)
+              handle_file(iconimagefilepath,iconimage_path)
 
 
           @staticmethod
@@ -84,12 +154,12 @@ class Handle_file():
                               pass
                   os.rename("%s.bak" % file_path, file_path)
 
-                  #
+
 
 
 
 if __name__ == '__main__':
-    Handle_file.start()
+    Handle_file.handle_launchimage()
     localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     print(localtime)
     pass

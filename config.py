@@ -22,6 +22,12 @@ projectPath = 'Error'
 projectInfo_dict = {}
 ChannelSdk = ''
 channelNo=''
+
+asset = 'Assets.xcassets/'
+
+
+
+
 if projectName == 'lycq':
     print('kakak')
     projectPath = BasePath +'/lycq-client_version/CocosLuaGame/'
@@ -29,12 +35,16 @@ if projectName == 'lycq':
     projectInfo_dict = lyprojectInfo_dict
     ChannelSdk = lyChannelSdk
     channelNo = lychannelNo
+    asset = '/ios/Images.xcassets/'
+
 elif projectName == 'zbcq':
     projectPath = BasePath + '/zbcq-client_version/CocosLuaGame/'
     PluginConfig = projectPath + 'frameworks/runtime-src/proj.ios_mac/' + '/ios/PluginConfig.xml'
     projectInfo_dict = zbprojectInfo_dict
     ChannelSdk = zbChannelSdk
     channelNo = zbchannelNo
+    asset = 'DTQCQHZB/Images.xcassets/'
+
 
 elif projectName == 'gzcq':
     projectPath = BasePath + '/client/gz-client_version/CocosLuaGame/'
@@ -42,6 +52,8 @@ elif projectName == 'gzcq':
     projectInfo_dict = gzprojectInfo_dict
     ChannelSdk = gzChannelSdk
     channelNo = gzchannelNo
+    asset = 'ios/Images.xcassets/'
+
 
 elif projectName == 'h5':
     projectPath = BasePath + '/H5_iOS/XFGame_WKWebView/XFGame_WKWebView/'
@@ -54,6 +66,8 @@ if projectName == 'h5':
 
 ioshd = ''
 bundleid = ''
+xcassets_path = xcodeprojPath + asset
+
 try:
     projectInfo = dict(projectInfo_dict[ChannelSdk]['info'][channelNo])
     # print(projectInfo)

@@ -251,12 +251,61 @@ zbprojectInfo_dict = {
                       'TIANTUOAPPID': '101070',
                       'CFBundleVersion': '1.0',
                       'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '200000',
+                      },
+            '12053': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.ltios.yanshan',
+                      'ios_hd': 'ios_hd149',
+                      'urlsechems': 'RaStar222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '300000',
+                      },
+            '12054': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.ltios.yanshan',
+                      'ios_hd': 'ios_hd149',
+                      'urlsechems': 'RaStar222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '300001',
+                      },
+            '12055': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.ltios.yanshan',
+                      'ios_hd': 'ios_hd149',
+                      'urlsechems': 'RaStar222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '300002',
+                      },
+            '12056': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.ltios.yanshan',
+                      'ios_hd': 'ios_hd149',
+                      'urlsechems': 'RaStar222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '300003',
+                      },
+            '12057': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.ltios.yanshan',
+                      'ios_hd': 'ios_hd149',
+                      'urlsechems': 'RaStar222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      'TT_MD_ID': '300004',
                       }
+
         }
     }
 
 }
 
-zbChannelSdk = 'tiantuo_chukai_scby'
-zbchannelNo = '12048'
+
+zbChannelSdk = 'tiantuo_qiye'
+zbchannelNo = '12057'
+
 
