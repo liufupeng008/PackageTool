@@ -14,7 +14,7 @@ ExportOptionsPath = BasePath + '/ipa'
 
 
 
-projectName = 'zbcq'
+projectName = 'lycq'
 
 
 PluginConfig = 'Error'
@@ -83,6 +83,7 @@ try:
     TIANTUOAPPID = projectInfo['TIANTUOAPPID']
 except Exception as e:
      pass
+
 provisioningProfile = ''
 if 'provisioningProfiles' in projectInfo.keys():
     provisioningProfile = projectInfo['provisioningProfiles']

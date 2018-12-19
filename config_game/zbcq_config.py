@@ -300,12 +300,24 @@ zbprojectInfo_dict = {
                       }
 
         }
-    }
+    },
+    'tiantuo_zb': {
+        'targetName': 'tiantuo_zb',
+        'info': {
+            '12050': {'displayName': '烈火龙城',
+                      'bundleid': 'com.lieHU.Olongc.pop',
+                      'ios_hd': 'ios_hd151',
+                      'urlsechems': 'RaStar411101059',
+                      'provisioningProfiles': 'dis.lieHU.Olongc.pop',
+                      'TIANTUOAPPID': '101059',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      }}}
 
 }
 
 
-zbChannelSdk = 'tiantuo_qiye'
-zbchannelNo = '12057'
+zbChannelSdk = 'tiantuo_zb'
+zbchannelNo = '12050'
 
 

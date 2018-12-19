@@ -47,6 +47,18 @@ lyprojectInfo_dict = {
                            'provisioningProfiles': 'lywz3.dis'
                            }
                  }},
+    'shenqi_yy': {
+        'targetName': 'shenqi_yy',
+        'info': {'21021': {'displayName': '烈焰武尊-霸者',
+                          'bundleid': 'com.xf.bz.ios',
+                          'ios_hd': 'ios_hd64',
+                          'urlsechems': 'miaolevv4922',
+                          'CFBundleVersion': '1.11.0',
+                          'CFBundleShortVersionString': '1.11.0',
+                          'packageid': '1002189',
+                          # 'provisioningProfiles': 'lywz3.dis'
+                          }
+                 }},
 
 
 
@@ -62,5 +74,5 @@ lyprojectInfo_dict = {
 
 
 }
-lyChannelSdk = 'xianfeng'
-lychannelNo='4113'
+lyChannelSdk = 'shenqi_yy'
+lychannelNo='21021'

@@ -64,9 +64,9 @@ time=$(date "+%Y%m%d%H%M%S")
 ipaname="$3"
 cd ${exportPath} && mv "${targetName}.ipa" "${targetName}${ipaname}${time}.ipa"
 
-cd ${projectPath} && rm -rf archive
+#cd ${projectPath} && rm -rf archive
 
-open ${exportPath}
+#open ${exportPath}
 
 
 

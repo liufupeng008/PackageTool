@@ -11,13 +11,13 @@ class Main():
       @staticmethod
       def start():
           # src res sum luac
-          compile_index.copyfileToResources()
-          # compile_index.copy_ioshd_to_Resources()
+          # compile_index.copyfileToResources()
+          compile_index.copy_ioshd_to_Resources()
           modifyPlist.start()
           modifyXML.start_modify_xml(channelNo)
           modifyImage_cls.start()
           # os.system('rm -rf /Users/yu/Library/Developer/Xcode/DerivedData')
-          exportArchive.start_archive()
+          # exportArchive.start_archive()
 
 
 
