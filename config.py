@@ -105,4 +105,4 @@ appstoreplist = {'compileBitcode': False,
 
 
 #配置导出的工程目录
-exportProjectPath = ''
+exportProjectPath = '/Users/lindada/Documents/MyStudy/CocosTest/CocosLuaGame/frameworks/runtime-src/Classes'
