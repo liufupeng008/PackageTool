@@ -20,8 +20,8 @@ lyprojectInfo_dict = {
                            'bundleid': 'com.yxm.lieyantianzun',
                            'ios_hd': 'ios_hd18',
                            'urlsechems': 'com.yxm.lieyantianzun',
-                           'CFBundleVersion': '1.4',
-                           'CFBundleShortVersionString': '1.4',
+                           'CFBundleVersion': '1.6',
+                           'CFBundleShortVersionString': '1.6',
                            }
                  }},
 
@@ -45,22 +45,61 @@ lyprojectInfo_dict = {
                            'CFBundleShortVersionString': '1.11.0',
                            'packageid': '1002165',
                            'provisioningProfiles': 'lywz3.dis'
+                           },
+                 '4130': {'displayName': '烈焰武尊',
+                           'bundleid': '6PN29E2TCD.com.shouyou.jh.outused1',
+                           'ios_hd': 'ios_hd69',
+                           'urlsechems': 'dggg1',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '1002211'
                            }
                  }},
+    'shenqi_yy': {
+        'targetName': 'shenqi_yy',
+        'info': {'21021': {'displayName': '烈焰武尊-霸者',
+                          'bundleid': 'com.xf.bz.ios',
+                          'ios_hd': 'ios_hd64',
+                          'urlsechems': 'miaolevv4922',
+                          'CFBundleVersion': '1.11.0',
+                          'CFBundleShortVersionString': '1.11.0',
+                          'packageid': '1002189',
+                          # 'provisioningProfiles': 'lywz3.dis'
+                          }
+                 }},
 
+    'xianfeng_zb': {
+        'targetName': 'xianfeng',
+        'info': {'4126': {'displayName': '开局一群狗',
+                           'bundleid': 'com.kjstg.dsd',
+                           'ios_hd': 'ios_hd65',
+                           'urlsechems': '',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '1002185',
+                           'provisioningProfiles': 'kjstg_dis_20181212'
+                           },
+                '4127': {'displayName': '烈焰灭神',
+                           'bundleid': 'com.lyms.hsdhji',
+                           'ios_hd': 'ios_hd66',
+                           'urlsechems': '',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '1002186',
+                           'provisioningProfiles': 'kjstg_dis_20181212'
+                           },
+                '4128': {'displayName': '嗜血战神',
+                          'bundleid': 'com.shixuezhanhun.23892',
+                          'ios_hd': 'ios_hd67',
+                          'urlsechems': '',
+                          'CFBundleVersion': '1.11.0',
+                          'CFBundleShortVersionString': '1.11.0',
+                          'packageid': '1002187',
+                          'provisioningProfiles': 'kjstg_dis_20181212'
+                          }
 
-
-    #zbcq
-
-    #lycq
-    # '20813': {'displayName': '烈焰武尊',
-    #          'bundleid': 'com.xf.lywz.tz',
-    #          'targetName': 'tzlywz27',
-    #          'ios_hd': 'ios_hd27',
-    #          'yxm_gameId':'xingtuo_longchengjuezhan_1'}
-
-
+                 }},
 
 }
-lyChannelSdk = 'xianfeng'
-lychannelNo='4113'
+lyChannelSdk = 'shenqi_yy'
+lychannelNo='21021'

@@ -79,7 +79,7 @@ class Handle_file():
           def start():
                 path = 'files/'
                 # path = '/Users/yu/Desktop/zbcq/tiantuo_yxm_zb/CocosLuaGame/frameworks/runtime-src/Classes/'
-                path = exportProjectPath
+                # path = exportProjectPath
                 def gci(filepath):
                     # 遍历filepath下所有文件，包括子目录
                     sourceDirList = os.listdir(filepath)
@@ -88,11 +88,11 @@ class Handle_file():
                         fi_d = os.path.join(filepath, fi)
                         if fi == 'protobuf-lite' or fi == 'basetool' or fi == 'scbyCode' or fi == 'resources' \
                                 or fi == 'recursive' or fi == 'yxm' or fi == 'YVsdk' \
-                                or fi == 'runtime' or fi ==  'userdata' or fi ==  'common' or fi == 'libSdk':
+                                or fi == 'runtime' or fi ==  'userdata' or fi ==  'third' or fi == 'libSdk':
                             continue
                         if os.path.isdir(fi_d):
                             gci(fi_d)
-                        elif fi.endswith('.m'):
+                        elif fi.endswith('.h') or fi.endswith('.m'):
                             if 'Lib' in fi_d or '.framework' in fi_d or 'AllTool' in fi_d:
                                 continue
                             # file_path = os.path.join(filepath, fi_d)
@@ -122,6 +122,9 @@ class Handle_file():
                               line = line.strip()
                               if line.startswith('//'):
                                   pass
+                              elif comment_lines == 0:
+                                  print(line)
+                                  f2.writelines(line+'\n')
                           # 空白行
                           elif line == '':
                               blank_lines += 1
@@ -138,7 +141,7 @@ class Handle_file():
                                   else:
                                       comment_lines = index
                               else:
-                                  f2.writelines(line)
+                                  f2.writelines(line+'\n')
 
                           elif '*/' in line and '/*' not in line:
                               line = line.strip()
@@ -159,7 +162,7 @@ class Handle_file():
 
 
 if __name__ == '__main__':
-    Handle_file.handle_launchimage()
+    Handle_file.start()
     localtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     print(localtime)
     pass

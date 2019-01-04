@@ -11,7 +11,7 @@ class Main():
       @staticmethod
       def start():
           # src res sum luac
-          compile_index.copyfileToResources()
+          # compile_index.copyfileToResources()
           compile_index.copy_ioshd_to_Resources()
           modifyPlist.start()
           modifyXML.start_modify_xml(channelNo)

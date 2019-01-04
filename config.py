@@ -83,6 +83,7 @@ try:
     TIANTUOAPPID = projectInfo['TIANTUOAPPID']
 except Exception as e:
      pass
+
 provisioningProfile = ''
 if 'provisioningProfiles' in projectInfo.keys():
     provisioningProfile = projectInfo['provisioningProfiles']

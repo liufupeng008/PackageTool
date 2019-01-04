@@ -13,12 +13,16 @@ class modifyPlist():
     def start_modify_plist(path):
         try:
             plist = {}
-            if package_method == 1:
+            if provisioningProfile != '':
                 plist = appstoreplist
-            elif package_method == 2:
+            else:
                 plist = xfplist
-            elif package_method == 4:
-                plist = devplist
+            # if package_method == 1:
+            #     plist = appstoreplist
+            # elif package_method == 2:
+            #     plist = xfplist
+            # elif package_method == 4:
+            #     plist = devplist
 
             writePlist(plist, "%s/ExportOptions.plist"%(path))
             print('plist write success',plist)

@@ -58,8 +58,8 @@ zbprojectInfo_dict = {
                         '5070': {'displayName': '荣耀传奇',
                                  'bundleid': 'com.yxm.rongyaochuanqi',
                                  'ios_hd': 'ios_hd135',
-                                 'yxm_gameId': 'xingtuo_rongyaochuanqi_1',
-                                 'urlsechems': 'com.yxm.rongyaochuanqi',
+                                 'yxm_gameId': 'xingtuo_rongyaochuanqiLS_1',
+                                 'urlsechems': 'com.yxm.rongyaochuanqiLS',
                                  'TIANTUOAPPID': '100961'},
 
                         '5077': {'displayName': '烈焰皇城',
@@ -338,12 +338,35 @@ zbprojectInfo_dict = {
                       'TT_MD_ID': '300004',
                       }
         }
-    }
+    },
+    'tiantuo_zb': {
+        'targetName': 'tiantuo_zb',
+        'info': {
+            '12050': {'displayName': '烈火龙城',
+                      'bundleid': 'com.lieHU.Olongc.pop',
+                      'ios_hd': 'ios_hd151',
+                      'urlsechems': 'RaStar411101059',
+                      'provisioningProfiles': 'dis.lieHU.Olongc.pop',
+                      'TIANTUOAPPID': '101059',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0',
+                      }}},
 
+    'RXSBK111': {
+        'targetName': 'RXSBK111',
+        'info': {
+            '4051': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.idang4896.sbkcq',
+                      'ios_hd': 'ios_hd111',
+                      'urlsechems': '',
+                      'provisioningProfiles': '',
+                      'CFBundleVersion': '1.2.3',
+                      'CFBundleShortVersionString': '1.2.3',
+                      }}}
 }
 
 
-zbChannelSdk = 'tiantuo_yxm_qiye'
-zbchannelNo = '5080'
+zbChannelSdk = 'tiantuo_yxm'
+zbchannelNo = '5070'
 
 
