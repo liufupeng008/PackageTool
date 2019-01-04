@@ -350,7 +350,23 @@ zbprojectInfo_dict = {
                       'TIANTUOAPPID': '101059',
                       'CFBundleVersion': '1.0',
                       'CFBundleShortVersionString': '1.0',
-                      }}},
+                      },
+        }
+    },
+    'tiantuo_simple_zb': {
+        'targetName': 'tiantuo_simple_zb',
+        'info': {
+            '5081': {'displayName': '烈火耀世',
+                      'bundleid': 'com.hjw.lhys',
+                      'ios_hd': 'ios_hd154',
+                      'urlsechems': '',
+                      'provisioningProfiles': 'lhys_dis_20181213',
+                      'TIANTUOAPPID': '101108',
+                      'CFBundleVersion': '1.1.2',
+                      'CFBundleShortVersionString': '1.1.2',
+                      }
+        }
+    },
 
     'RXSBK111': {
         'targetName': 'RXSBK111',
@@ -366,7 +382,7 @@ zbprojectInfo_dict = {
 }
 
 
-zbChannelSdk = 'tiantuo_yxm'
-zbchannelNo = '5070'
+zbChannelSdk = 'tiantuo_simple_zb'
+zbchannelNo = '5081'
 
 
