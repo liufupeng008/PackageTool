@@ -14,7 +14,7 @@ ExportOptionsPath = BasePath + '/ipa'
 
 
 
-projectName = 'lycq'
+projectName = 'zbcq'
 
 
 PluginConfig = 'Error'

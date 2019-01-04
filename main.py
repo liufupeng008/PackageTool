@@ -17,7 +17,7 @@ class Main():
           modifyXML.start_modify_xml(channelNo)
           modifyImage_cls.start()
           # os.system('rm -rf /Users/yu/Library/Developer/Xcode/DerivedData')
-          # exportArchive.start_archive()
+          exportArchive.start_archive()
 
 
 
