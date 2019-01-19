@@ -204,8 +204,8 @@ zbprojectInfo_dict = {
                               'ios_hd': 'ios_hd146',
                               'urlsechems': '',
                               'TIANTUOAPPID': '100706',
-                              'CFBundleVersion': '1.1.2',
-                              'CFBundleShortVersionString': '1.1.2',
+                              'CFBundleVersion': '1.2.2',
+                              'CFBundleShortVersionString': '1.2.2',
                               'provisioningProfiles':'ydsc_dis_20180504'
                               }
                 }
@@ -218,8 +218,8 @@ zbprojectInfo_dict = {
                                   'ios_hd': 'ios_hd148',
                                   'urlsechems': '',
                                   'TIANTUOAPPID': '100295',
-                                  'CFBundleVersion': '1.1.2',
-                                  'CFBundleShortVersionString': '1.1.2',
+                                  'CFBundleVersion': '1.2.2',
+                                  'CFBundleShortVersionString': '1.2.2',
                                   'provisioningProfiles':'scby_dis_20181107'
                                   }
                     }
@@ -237,6 +237,45 @@ zbprojectInfo_dict = {
                       'CFBundleShortVersionString': '1.0',
                       'provisioningProfiles':'hccs_dis_20181025'
 
+                      }
+        }
+    },
+    'tiantuo_chukai_qiye': {
+        'targetName': 'tiantuo_chukai_qiye',
+        'info': {
+            '12059': {'displayName': '烈火雷霆',
+                      'bundleid': 'com.lhleiting',
+                      'ios_hd': 'ios_hd153',
+                      'urlsechems': 'chukaigame222101070',
+                      'TIANTUOAPPID': '101070',
+                      'CFBundleVersion': '1.1',
+                      'CFBundleShortVersionString': '1.1'
+                      }
+        }
+    },
+    'tiantuo_98huyu_qiye': {
+        'targetName': 'tiantuo_98huyu_qiye',
+        'info': {
+            '12061': {'displayName': '不朽战歌',
+                      'bundleid': 'com.bxzg.98hy',
+                      'ios_hd': 'ios_hd155',
+                      'urlsechems': '',
+                      'TIANTUOAPPID': '101118',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0'
+                      }
+        }
+    },
+    'tiantuo_yxm_qiye': {
+        'targetName': 'tiantuo_yxm_qiye',
+        'info': {
+            '5080': {'displayName': '雷霆烈焰',
+                      'bundleid': 'com.leitingly',
+                      'ios_hd': 'ios_hd152',
+                      'urlsechems': 'com.leitingly',
+                      'TIANTUOAPPID': '101107',
+                      'CFBundleVersion': '1.0',
+                      'CFBundleShortVersionString': '1.0'
                       }
         }
     },
@@ -298,7 +337,6 @@ zbprojectInfo_dict = {
                       'CFBundleShortVersionString': '1.0',
                       'TT_MD_ID': '300004',
                       }
-
         }
     },
     'tiantuo_zb': {
@@ -312,7 +350,23 @@ zbprojectInfo_dict = {
                       'TIANTUOAPPID': '101059',
                       'CFBundleVersion': '1.0',
                       'CFBundleShortVersionString': '1.0',
-                      }}},
+                      },
+        }
+    },
+    'tiantuo_simple_zb': {
+        'targetName': 'tiantuo_simple_zb',
+        'info': {
+            '5081': {'displayName': '烈火耀世',
+                      'bundleid': 'com.hjw.lhys',
+                      'ios_hd': 'ios_hd154',
+                      'urlsechems': '',
+                      'provisioningProfiles': 'lhys_dis_20181213',
+                      'TIANTUOAPPID': '101108',
+                      'CFBundleVersion': '1.1.2',
+                      'CFBundleShortVersionString': '1.1.2',
+                      }
+        }
+    },
 
     'RXSBK111': {
         'targetName': 'RXSBK111',
@@ -328,7 +382,7 @@ zbprojectInfo_dict = {
 }
 
 
-zbChannelSdk = 'tiantuo_yxm'
-zbchannelNo = '5070'
+zbChannelSdk = 'tiantuo_simple_zb'
+zbchannelNo = '5081'
 
 

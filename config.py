@@ -2,14 +2,14 @@
 from config_game.lycq_config import *
 from config_game.zbcq_config import *
 from config_game.gzcq_config import *
-package_method = 2  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
+package_method = 1  #1 app-store, 2 ad-hoc,3  enterprise, 4 development。
 #docker
 BasePath= '/var/project'
 #debug
 import os
 if os.path.exists(BasePath) ==False:
-    # BasePath = '/Users/lindada/Documents/MyWork'
-    BasePath = '/Users/yu/Desktop/gameProject'
+    BasePath = '/Users/lindada/Documents/MyWork'
+    # BasePath = '/Users/yu/Desktop/gameProject'
 ExportOptionsPath = BasePath + '/ipa'
 
 
