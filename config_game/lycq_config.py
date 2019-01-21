@@ -100,6 +100,19 @@ lyprojectInfo_dict = {
 
                  }},
 
+    '98huyu': {
+        'targetName': '98huyu',
+        'info': {'21041': {'displayName': '不朽雷霆',
+                           'bundleid': 'com.98wan.cytz',
+                           'ios_hd': 'ios_hd70',
+                           'urlsechems': '',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '20027',
+                           #'provisioningProfiles': 'lywz3.dis'
+                           }
+                 }},
+
 }
-lyChannelSdk = 'shenqi_yy'
-lychannelNo='21021'
+lyChannelSdk = 'xianfeng_zb'
+lychannelNo='4128'
