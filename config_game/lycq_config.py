@@ -114,5 +114,5 @@ lyprojectInfo_dict = {
                  }},
 
 }
-lyChannelSdk = '98huyu'
-lychannelNo='21041'
+lyChannelSdk = 'xianfeng_zb'
+lychannelNo='4128'
