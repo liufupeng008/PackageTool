@@ -2,6 +2,8 @@ import os
 import shutil
 from PIL import Image
 from config import *
+import RemoveImageAlphaChannel
+
 class modifyImage_cls():
 
       @staticmethod
@@ -109,12 +111,13 @@ class modifyImage_cls():
                                           shutil.copyfile('%s/%s' % (yfy_dir, img_name),
                                                           '%s/%dx%d-2.png' % (dir_name, width, height))
                                           # os.rename('%s/%s' % (yfy_dir, img_name),'%s/%dx%d-2.png' % (yfy_dir, img_name))
-                                  # if width == 1024:
+                                  if width == 1024:
                                   #     img = img.convert('RGBA')
                                   #     img_blender = Image.new('RGBA', img.size, (0, 0, 0, 0))
                                   #     img = Image.blend(img_blender, img, 1)
                                   #     out = img.resize((1024, 1024))
                                   #     out.save(path, 'png')
+                                    RemoveImageAlphaChannel.main(path, path, False)
 
 
                                   shutil.copyfile('%s/%s' % (yfy_dir, img_name),'%s/%dx%d.png' % (dir_name, width,height))

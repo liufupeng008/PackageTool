@@ -356,15 +356,42 @@ zbprojectInfo_dict = {
     'tiantuo_simple_zb': {
         'targetName': 'tiantuo_simple_zb',
         'info': {
-            '5081': {'displayName': '烈火耀世',
-                      'bundleid': 'com.hjw.lhys',
-                      'ios_hd': 'ios_hd154',
-                      'urlsechems': '',
-                      'provisioningProfiles': 'lhys_dis_20181213',
-                      'TIANTUOAPPID': '101108',
-                      'CFBundleVersion': '1.1.2',
-                      'CFBundleShortVersionString': '1.1.2',
-                      }
+            '5081': {
+                'displayName': '烈火耀世',
+                'bundleid': 'com.hjw.lhys',
+                'ios_hd': 'ios_hd154',
+                'urlsechems': '',
+                'provisioningProfiles': 'lhys_dis_20181213',
+                'TIANTUOAPPID': '101108',
+                'CFBundleVersion': '1.2.2',
+                'CFBundleShortVersionString': '1.2.2',
+                'isCocoapods': True,
+            }
+        }
+    },
+    'tiantuo_rastar_ss': {
+        'targetName': 'tiantuo_rastar_ss',
+        'info': {
+            '5082': {
+                'displayName': '烈火雷霆',
+                'bundleid': 'com.rastargame.lhlt',
+                'ios_hd': 'ios_hd156',
+                'urlsechems': '',
+                'provisioningProfiles': 'lhlt_dis_20190103',
+                'TIANTUOAPPID': '101133',
+                'CFBundleVersion': '1.2.2',
+                'CFBundleShortVersionString': '1.2.2',
+            },
+            '12064': {
+                'displayName': '烈火雷霆',
+                'bundleid': 'com.rastargame.lhlt',
+                'ios_hd': 'ios_hd157',
+                'urlsechems': '',
+                'provisioningProfiles': 'lhlt_dis_20190103',
+                'TIANTUOAPPID': '101137',
+                'CFBundleVersion': '1.0.0',
+                'CFBundleShortVersionString': '1.0.0',
+            }
         }
     },
 
@@ -382,7 +409,7 @@ zbprojectInfo_dict = {
 }
 
 
-zbChannelSdk = 'tiantuo_simple_zb'
-zbchannelNo = '5081'
+zbChannelSdk = 'tiantuo_rastar_ss'
+zbchannelNo = '12064'
 
 
