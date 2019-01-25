@@ -20,7 +20,7 @@ class exportArchive():
         print(a)
         p = re.sub("[A-Z]", "", a[len(a)-1])
 
-        os.system('./sNextBuild.sh %s %s %s'%(targetName,projectPath,p))
+        os.system('./sNextBuild.sh %s %s %s %s %s %s'%(targetName,projectPath,p,ioshd,displayName,projectName))
 
         endtime = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
         print('start archive ', localtime)

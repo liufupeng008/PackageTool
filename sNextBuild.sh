@@ -28,7 +28,9 @@ echo "---${targetName}---"
 echo "---"$3"---"
 #####定义需要打包的target
 echo "开始clean"
-
+ioshd="$4"
+appname="$5"
+game="$6"
 #更改ExportOptions 需要传入ExportOptionsPlist 文件的目录（也是项目所在目录）
 #cd $pythonPath && source activate MyPython && python modifyPlist.py
 
@@ -53,7 +55,7 @@ nowtime=$(date "+%Y-%m-%d-%H:%M:%S")
 echo "start exportArchive ${nowtime}"
 
 nowtime=$(date "+%Y-%m-%d-%H:%M:%S")
-exportPath="/Users/yu/Desktop/ipa/${targetName}/${nowtime}"
+exportPath="/Users/yu/Desktop/ipa/${ioshd}_${appname}/${nowtime}"
 
 xcodebuild -exportArchive -archivePath ${archivePath} -exportPath ${exportPath}  -exportOptionsPlist ExportOptions.plist -allowProvisioningUpdates
 

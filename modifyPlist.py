@@ -38,7 +38,8 @@ class modifyPlist():
             plistPath = xcodeprojPath+targetName+'-info.plist'
             if projectName == 'gzcq':
                 plistPath = xcodeprojPath +'ios/plist/'+ targetName + '-info.plist'
-
+            elif projectName == 'lycq':
+                plistPath = xcodeprojPath + 'plist/' + targetName + '-info.plist'
             try:
                 plist = readPlist(plistPath)
             except FileNotFoundError as e:

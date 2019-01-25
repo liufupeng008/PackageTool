@@ -405,11 +405,23 @@ zbprojectInfo_dict = {
                       'provisioningProfiles': '',
                       'CFBundleVersion': '1.2.3',
                       'CFBundleShortVersionString': '1.2.3',
-                      }}}
+                      }}},
+
+    'tiantuo_yxm_v1': {
+        'targetName': 'tiantuo_yxm_v1.0.0',
+        'info': {
+            '5083': {'displayName': '烈火传奇',
+                     'bundleid': 'com.idang4896.sbkcq',
+                     'ios_hd': 'ios_hd158',
+                     'urlsechems': '',
+                     'provisioningProfiles': '',
+                     'CFBundleVersion': '1.1.0',
+                     'CFBundleShortVersionString': '1.1.0',
+                     }}}
 }
 
 
-zbChannelSdk = 'tiantuo_rastar_ss'
-zbchannelNo = '12064'
+zbChannelSdk = 'tiantuo_yxm_v1'
+zbchannelNo = '5083'
 
 
