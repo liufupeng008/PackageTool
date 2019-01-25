@@ -248,8 +248,8 @@ zbprojectInfo_dict = {
                       'ios_hd': 'ios_hd153',
                       'urlsechems': 'chukaigame222101070',
                       'TIANTUOAPPID': '101070',
-                      'CFBundleVersion': '1.1',
-                      'CFBundleShortVersionString': '1.1'
+                      'CFBundleVersion': '1.2',
+                      'CFBundleShortVersionString': '1.2'
                       }
         }
     },
@@ -274,8 +274,8 @@ zbprojectInfo_dict = {
                       'ios_hd': 'ios_hd152',
                       'urlsechems': 'com.leitingly',
                       'TIANTUOAPPID': '101107',
-                      'CFBundleVersion': '1.0',
-                      'CFBundleShortVersionString': '1.0'
+                      'CFBundleVersion': '1.2',
+                      'CFBundleShortVersionString': '1.2'
                       }
         }
     },
@@ -409,7 +409,7 @@ zbprojectInfo_dict = {
 }
 
 
-zbChannelSdk = 'tiantuo_rastar_ss'
-zbchannelNo = '12064'
+zbChannelSdk = 'tiantuo_chukai_qiye'
+zbchannelNo = '12059'
 
 
