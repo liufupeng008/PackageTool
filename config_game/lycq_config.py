@@ -112,7 +112,19 @@ lyprojectInfo_dict = {
                            #'provisioningProfiles': 'lywz3.dis'
                            }
                  }},
+    'benghua_qiye': {
+        'targetName': 'benghua_qiye',
+        'info': {'21051': {'displayName': '烈焰战神',
+                           'bundleid': 'com.benghua.lyzs',
+                           'ios_hd': 'ios_hd72',
+                           'urlsechems': '',
+                           'CFBundleVersion': '1.11.0',
+                           'CFBundleShortVersionString': '1.11.0',
+                           'packageid': '1002253',
+                           #'provisioningProfiles': 'lywz3.dis'
+                           }
+                 }},
 
 }
-lyChannelSdk = 'xianfeng_zb'
-lychannelNo='4128'
+lyChannelSdk = 'benghua_qiye'
+lychannelNo='21051'
